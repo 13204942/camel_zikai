@@ -26,7 +26,8 @@ from camel.toolkits.medcalc_bench.utils.rounding import round_number
 
 
 def fahrenheit_to_celsius_explanation(temperature, units):
-    if units == "degrees celsius":
+    # if units == "degrees celsius":
+    if "celsius" in units:
         return (
             f"The patient's temperature is {temperature} "
             f"degrees celsius. ",
