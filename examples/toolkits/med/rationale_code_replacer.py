@@ -39,11 +39,52 @@ def get_function_mapping_from_modules():
                 tool_name = 'cha2ds2_vasc_score'
             elif name == 'calculate_pe_wells_explanation':
                 tool_name = 'wells_criteria_pe'
+            elif name == 'compute_steroid_conversion_explanation':
+                tool_name = 'steroid_conversion'
+            elif name == 'compute_anion_gap_explanation':
+                tool_name = 'anion_gap'
+            elif name == 'compute_delta_gap_explanation':
+                tool_name = 'delta_gap'
+            elif name == 'compute_serum_osmolality_explanation':
+                tool_name = 'sOsm'
+            elif name == 'compute_albumin_corrected_anion_explanation':
+                tool_name = 'albumin_corrected_anion'
+            elif name == 'compute_albumin_corrected_delta_gap_explanation':
+                tool_name = 'albumin_corrected_delta_gap'
+            elif name == 'compute_albumin_delta_ratio_explanation':
+                tool_name = 'albumin_delta_ratio'
+            elif name == 'compute_sodium_correction_hyperglycemia_explanation':
+                tool_name = 'sch'
+            elif name == 'compute_ldl_explanation':
+                tool_name = 'ldl_calculated'
             else:
                 # 一般情况下去掉_explanation后缀
                 tool_name = name.replace('_explanation', '')
             
             all_functions[tool_name] = obj
+    
+    # 添加手动映射以处理可能的名称差异
+    manual_mappings = {
+        'steroid_conversion': compute_steroid_conversion_explanation,
+        'bsa': bsa_calculator_explaination,
+        'bsa_calculator': bsa_calculator_explaination,
+        'free_water_deficit': free_water_deficit_explanation,
+        'cardiac_risk': compute_cardiac_index_explanation,
+        'cardiac_risk_index': compute_cardiac_index_explanation,
+        'centor': compute_centor_score_explanation,
+        'calcium_correction': calculate_corrected_calcium_explanation,
+        'maintenance_fluid': maintenance_fluid_explanation,
+        'fever_pain': compute_fever_pain_explanation,
+        'feverpain': compute_fever_pain_explanation,
+        'glasgow_coma': compute_glasgow_coma_score_explanation,
+        'conception': add_2_weeks_explanation,
+        'estimated_due_date': add_40_weeks_explanation
+    }
+    
+    # 添加手动映射
+    for tool_name, func in manual_mappings.items():
+        if tool_name not in all_functions:  # 只有在不存在时才添加
+            all_functions[tool_name] = func
     
     return all_functions
 
@@ -103,6 +144,21 @@ def format_args_for_function(tool_name, args):
         if 'age_value' in args and 'age_unit' in args:
             formatted_args['age'] = (args['age_value'], args['age_unit'])
     
+    elif tool_name == 'steroid_conversion':
+        # 按照compute_steroid_conversion_explanation需要的格式组织参数
+        if 'source_drug' in args:
+            formatted_args['source_drug'] = args['source_drug']
+        if 'target_drug' in args:
+            formatted_args['target_drug'] = args['target_drug']
+        if 'source_route' in args:
+            formatted_args['source_route'] = args['source_route']
+        if 'target_route' in args:
+            formatted_args['target_route'] = args['target_route']
+        if 'source_value' in args and 'source_unit' in args:
+            formatted_args['source_dose'] = (args['source_value'], args['source_unit'])
+        elif 'source_dose_value' in args and 'source_dose_unit' in args:
+            formatted_args['source_dose'] = (args['source_dose_value'], args['source_dose_unit'])
+    
     else:
         # 默认情况下，尝试将可能是元组的参数转换为正确格式
         for key, value in args.items():
@@ -134,7 +190,17 @@ def generate_direct_code(tool_name, args, function_map):
         str: 生成的代码
     """
     if tool_name not in function_map:
-        return f"# 未找到工具: {tool_name}"
+        # 尝试寻找相似的工具名
+        similar_tools = []
+        for name in function_map.keys():
+            if tool_name.lower() in name.lower() or name.lower() in tool_name.lower():
+                similar_tools.append(name)
+        
+        if similar_tools:
+            similar_str = ", ".join(similar_tools)
+            return f"# 未找到工具: {tool_name}\n# 可能相似的工具: {similar_str}"
+        else:
+            return f"# 未找到工具: {tool_name}"
     
     function = function_map[tool_name]
     module_name = function.__module__
@@ -192,6 +258,9 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
     # 获取函数映射
     function_map = get_function_mapping_from_modules()
     
+    # 记录未找到的工具
+    missing_tools = set()
+    
     # 替换每个rationale
     for item in data:
         if "rationale" in item and isinstance(item["rationale"], list):
@@ -205,6 +274,11 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
                     
                     # 生成代码
                     code = generate_direct_code(tool_name, args, function_map)
+                    
+                    # 如果未找到工具，记录下来
+                    if code.startswith("# 未找到工具"):
+                        missing_tools.add(tool_name)
+                    
                     all_codes.append(f"# {tool_name} 函数调用:\n{code}\n")
             
             # 拼接所有代码
@@ -216,6 +290,10 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
                 
                 # 替换原始的rationale
                 item["rationale"] = new_rationale
+    
+    # 如果有未找到的工具，输出警告
+    if missing_tools:
+        print(f"警告: 以下工具未找到: {', '.join(missing_tools)}")
     
     # 写入输出文件
     with open(output_file, 'w', encoding='utf-8') as f:
