@@ -400,13 +400,13 @@ def generate_direct_code(tool_name, args, function_map):
     args_str = "{\n" + "\n".join(args_lines) + "\n}"
     
     call_stmt = f"""
-# 准备输入参数
+# reall for parms
 input_variables = {args_str}
 
-# 调用函数
+# call function
 result = {function_name}(input_variables)
 
-# 打印结果
+# return result
 print(result)
 """
     
@@ -458,15 +458,15 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
                     if code.startswith("# 未找到工具"):
                         missing_tools.add(tool_name)
                     
-                    all_codes.append(f"# {tool_name} 函数调用:\n{code}\n")
+                    all_codes.append(f"# {tool_name} function call:\n{code}\n")
             
             # 拼接所有代码
             if all_codes:
                 # 创建新的rationale项
-                new_rationale = [{
-                    "content": "\n\n".join(all_codes)
-                }]
-                
+                new_rationale = all_codes
+                # new_rationale = [{
+                #     "content": "\n\n".join(all_codes)
+                # }]
                 # 替换原始的rationale
                 item["rationale"] = new_rationale
     
