@@ -158,3 +158,134 @@ result=abw_explanation( {
 
 
 print(result)
+
+# Add this function at the end of the file to handle dictionary input for BMI calculation
+def bmi_calculator_with_dict(input_dict):
+    """
+    Calculate BMI from a dictionary input
+    
+    Args:
+        input_dict: Dictionary containing weight and height information
+        
+    Returns:
+        float: BMI value
+    """
+    if 'weight' in input_dict and 'height' in input_dict:
+        # If weight and height are already tuples in the dictionary
+        weight = input_dict['weight']
+        height = input_dict['height']
+        
+        # Handle if they're tuples with units
+        if isinstance(weight, tuple) and len(weight) == 2:
+            weight_value = weight[0]
+            weight_unit = weight[1]
+        else:
+            weight_value = weight
+            weight_unit = 'kg'
+            
+        if isinstance(height, tuple) and len(height) == 2:
+            height_value = height[0]
+            height_unit = height[1]
+        else:
+            height_value = height
+            height_unit = 'cm'
+            
+        # Convert to standard units if needed
+        if weight_unit != 'kg':
+            # Convert weight to kg
+            if weight_unit == 'lbs':
+                weight_value = weight_value * 0.453592
+        
+        if height_unit != 'm':
+            # Convert height to meters
+            if height_unit == 'cm':
+                height_value = height_value / 100
+            elif height_unit == 'in':
+                height_value = height_value * 0.0254
+        
+        # Calculate BMI
+        bmi = weight_value / (height_value ** 2)
+        return bmi
+    
+    # If weight and height are specified separately with value/unit keys
+    elif 'weight_value' in input_dict and 'height_value' in input_dict:
+        weight_value = input_dict['weight_value']
+        height_value = input_dict['height_value']
+        
+        weight_unit = input_dict.get('weight_unit', 'kg')
+        height_unit = input_dict.get('height_unit', 'cm')
+        
+        # Convert to standard units if needed
+        if weight_unit != 'kg':
+            # Convert weight to kg
+            if weight_unit == 'lbs':
+                weight_value = weight_value * 0.453592
+        
+        if height_unit != 'm':
+            # Convert height to meters
+            if height_unit == 'cm':
+                height_value = height_value / 100
+            elif height_unit == 'in':
+                height_value = height_value * 0.0254
+        
+        # Calculate BMI
+        bmi = weight_value / (height_value ** 2)
+        return bmi
+    
+    return None
+
+# Override the original bmi_calculator_explanation function to handle dict or individual values
+def bmi_calculator_explanation(input_variables):
+    # First, check if input is a dictionary
+    if isinstance(input_variables, dict):
+        # Try to extract weight and height from the dict
+        if ('weight' in input_variables and 'height' in input_variables) or \
+           ('weight_value' in input_variables and 'height_value' in input_variables):
+            bmi = bmi_calculator_with_dict(input_variables)
+            if bmi:
+                return f"BMI = {bmi:.2f} kg/m²"
+        
+    # If dict didn't have expected keys or calculation failed, handle explicit parameters
+    if hasattr(input_variables, 'get'):
+        weight = input_variables.get('weight', None)
+        height = input_variables.get('height', None)
+        
+        if not weight and 'weight_value' in input_variables:
+            weight_value = input_variables.get('weight_value')
+            weight_unit = input_variables.get('weight_unit', 'kg')
+            weight = (weight_value, weight_unit)
+            
+        if not height and 'height_value' in input_variables:
+            height_value = input_variables.get('height_value')
+            height_unit = input_variables.get('height_unit', 'cm')
+            height = (height_value, height_unit)
+            
+        if weight and height:
+            # Process the values
+            if isinstance(weight, tuple) and len(weight) == 2:
+                weight_value, weight_unit = weight
+            else:
+                weight_value = weight
+                weight_unit = 'kg'
+                
+            if isinstance(height, tuple) and len(height) == 2:
+                height_value, height_unit = height
+            else:
+                height_value = height
+                height_unit = 'cm'
+            
+            # Convert units if needed
+            if weight_unit == 'lbs':
+                weight_value = weight_value * 0.453592  # Convert to kg
+                
+            if height_unit == 'cm':
+                height_value = height_value / 100  # Convert to meters
+            elif height_unit == 'in':
+                height_value = height_value * 0.0254  # Convert to meters
+                
+            # Calculate BMI
+            bmi = weight_value / (height_value ** 2)
+            return f"BMI = {bmi:.2f} kg/m²"
+    
+    # Default response if calculation couldn't be performed
+    return "Insufficient data to calculate BMI. Please provide weight and height."
