@@ -813,9 +813,7 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
             if all_codes:
                 # 创建新的rationale项
                 new_rationale = all_codes
-                # new_rationale = [{
-                #     "content": "\n\n".join(all_codes)
-                # }]
+                item["content"] = item["rationale"][-1]["content"]
                 # 替换原始的rationale
                 item["rationale"] = new_rationale
     
