@@ -34,7 +34,7 @@ from camel.toolkits.medcalc_bench.utils.unit_converter_new import (
 def sirs_criteria_explanation(input_parameters):
     explanation = r"""
     The rules for SIRS Criteria are listed below:
-    
+
        1. Temperature >38°C (100.4°F) or <36°C (96.8°F): No = 0 points, 
        Yes = +1 point
        2. Heart rate >90: No = 0 points, Yes = +1 point
@@ -42,7 +42,7 @@ def sirs_criteria_explanation(input_parameters):
        point
        4. White blood cell count (WBC) >12,000/mm³, <4,000/mm³, or >10% 
        bands: No = 0 points, Yes = +1 point
-    
+
     The total number of criteria met is taken by summing the score for each 
     criteria.\n\n
     """
@@ -171,24 +171,28 @@ def sirs_criteria_explanation(input_parameters):
 
     if 'paco2' in input_parameters:
         paco2 = input_parameters['paco2'][0]
-        explanation += (
-            f"The patient's PaCO₂ partial pressure is {paco2} mm " f"Hg, "
-        )
-        res = ""
-
-        if paco2 < 32:
-            res += "which is less than than 32 mm Hg. "
-            paco2_met = True
-        elif paco2 > 32:
-            res += "which is greater or equal to than 32 mm Hg. "
+        paco2_unit = input_parameters['paco2'][1]
+        if paco2 is not None and paco2_unit is not None:
+            explanation += (
+                f"The patient's PaCO₂ partial pressure"
+                f"is {paco2} {paco2_unit}, "
+            )
+            if paco2 < 32:
+                explanation += "which is less than 32 mm Hg. "
+                paco2_met = True
+            else:
+                explanation += "which is greater than or equal to 32 mm Hg. "
+                paco2_met = False
+        else:
+            explanation += (
+                "The patient's PaCO₂ partial pressure data is not available. "
+                "We cannot assess this part of the criteria. "
+            )
             paco2_met = False
-
-        explanation += res
     else:
         explanation += (
-            "The patient's PaCO₂ partial pressure is not "
-            "provided and so we assume that the patient's "
-            "partial pressure is greater than or equal to 32 mm Hg."
+            "The patient's PaCO₂ partial pressure is not provided. "
+            "We cannot assess this part of the criteria."
         )
         paco2_met = False
 

@@ -113,17 +113,17 @@ def compute_steroid_conversion_explanation(input_parameters):
             8. Triamcinolone: Route = IV, Equivalent Dose = 4 mg
         """
     conversion_dict = {
-        "Betamethasone IV": 1,
-        "Cortisone PO": 33.33,
-        "Dexamethasone IV": 1,
-        "Dexamethasone PO": 1,
-        "Hydrocortisone IV": 26.67,
-        "Hydrocortisone PO": 26.67,
-        "MethylPrednisoLONE IV": 5.33,
-        "MethylPrednisoLONE PO": 5.33,
-        "PrednisoLONE PO": 6.67,
-        "PredniSONE PO": 6.67,
-        "Triamcinolone IV": 5.33,
+        "betamethasone iv": 1,
+        "cortisone po": 33.33,
+        "dexamethasone iv": 1,
+        "dexamethasone po": 1,
+        "hydrocortisone iv": 26.67,
+        "hydrocortisone po": 26.67,
+        "methylprednisolone iv": 5.33,
+        "methylprednisolone po": 5.33,
+        "prednisolone po": 6.67,
+        "prednisone po": 6.67,
+        "triamcinolone iv": 5.33,
     }
 
     explanation += "\n\n"
@@ -137,8 +137,8 @@ def compute_steroid_conversion_explanation(input_parameters):
     )
     explanation += input_drug_mass_exp
 
-    target_drug_name = input_parameters["target steroid"]
-    input_drug_name = input_parameters["input steroid"][0]
+    target_drug_name = input_parameters["target steroid"].lower()
+    input_drug_name = input_parameters["input steroid"][0].lower()
     input_unit = input_parameters["input steroid"][2]
 
     from_multiplier = conversion_dict[input_drug_name]

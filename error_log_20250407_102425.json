@@ -1,0 +1,367 @@
+{
+  "summary": {
+    "total_errors": 32,
+    "error_types": {
+      "TypeError": 58,
+      "KeyError": 32
+    },
+    "most_common_error": [
+      "TypeError",
+      58
+    ]
+  },
+  "errors": [
+    {
+      "index": 1064,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 228.664 mg of Cortisone PO.  Based on the patient's dose of Cortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "36.586"
+    },
+    {
+      "index": 1065,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 8.58 mg of Dexamethasone PO.  Based on the patient's dose of Dexamethasone PO, what is the equivalent dosage in mg of Dexamethasone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "8.58"
+    },
+    {
+      "index": 1069,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 187.736 mg of Hydrocortisone IV.  Based on the patient's dose of Hydrocortisone IV, what is the equivalent dosage in mg of Betamethasone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "6.946"
+    },
+    {
+      "index": 1070,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 107.735 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of PrednisoLONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "26.934"
+    },
+    {
+      "index": 1073,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 5.05 mg of Dexamethasone PO.  Based on the patient's dose of Dexamethasone PO, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "26.916"
+    },
+    {
+      "index": 1076,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 23.465 mg of Triamcinolone IV.  Based on the patient's dose of Triamcinolone IV, what is the equivalent dosage in mg of Betamethasone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "4.411"
+    },
+    {
+      "index": 1078,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 190.936 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "38.187"
+    },
+    {
+      "index": 1080,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 128.268 mg of Hydrocortisone IV.  Based on the patient's dose of Hydrocortisone IV, what is the equivalent dosage in mg of Cortisone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "160.335"
+    },
+    {
+      "index": 1081,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 45.437 mg of MethylPrednisoLONE IV.  Based on the patient's dose of MethylPrednisoLONE IV, what is the equivalent dosage in mg of Hydrocortisone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "227.367"
+    },
+    {
+      "index": 1082,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 123.468 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of Dexamethasone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "4.568"
+    },
+    {
+      "index": 1083,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 14.132 mg of MethylPrednisoLONE IV.  Based on the patient's dose of MethylPrednisoLONE IV, what is the equivalent dosage in mg of Dexamethasone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "2.657"
+    },
+    {
+      "index": 1084,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 8.35 mg of Dexamethasone IV.  Based on the patient's dose of Dexamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "222.695"
+    },
+    {
+      "index": 1085,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 44.802 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of Dexamethasone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "6.72"
+    },
+    {
+      "index": 1086,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 44.136 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of Betamethasone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "6.62"
+    },
+    {
+      "index": 1087,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 82.333 mg of Cortisone PO.  Based on the patient's dose of Cortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "13.173"
+    },
+    {
+      "index": 1088,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 29.401 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of Hydrocortisone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "117.575"
+    },
+    {
+      "index": 1089,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 8.84 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "47.117"
+    },
+    {
+      "index": 1090,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 13.067 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "10.441"
+    },
+    {
+      "index": 1091,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 1.2 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "32.004"
+    },
+    {
+      "index": 1092,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 16.426 mg of MethylPrednisoLONE PO.  Based on the patient's dose of MethylPrednisoLONE PO, what is the equivalent dosage in mg of Dexamethasone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "3.088"
+    },
+    {
+      "index": 1093,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 13.534 mg of PredniSONE PO.  Based on the patient's dose of PredniSONE PO, what is the equivalent dosage in mg of Dexamethasone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "2.03"
+    },
+    {
+      "index": 1094,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 5.77 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "153.886"
+    },
+    {
+      "index": 1095,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 97.335 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "19.467"
+    },
+    {
+      "index": 1096,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 1.35 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "7.196"
+    },
+    {
+      "index": 1097,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 38.002 mg of PredniSONE PO.  Based on the patient's dose of PredniSONE PO, what is the equivalent dosage in mg of Hydrocortisone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "151.97"
+    },
+    {
+      "index": 1098,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 5.11 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of PrednisoLONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "34.084"
+    },
+    {
+      "index": 1099,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 19.199 mg of Triamcinolone IV.  Based on the patient's dose of Triamcinolone IV, what is the equivalent dosage in mg of PredniSONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "24.018"
+    },
+    {
+      "index": 1100,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 25.735 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of PredniSONE PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "25.735"
+    },
+    {
+      "index": 1101,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 13.599 mg of MethylPrednisoLONE IV.  Based on the patient's dose of MethylPrednisoLONE IV, what is the equivalent dosage in mg of Dexamethasone PO? ...",
+      "rationale_index": 0,
+      "expected_answer": "2.557"
+    },
+    {
+      "index": 1107,
+      "calc_name": "Steroid Conversion Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 145, in compute_steroid_conversion_explanation\n    to_multiplier = conversion_dict[target_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "Patient has taken 5.25 mg of Dexamethasone IV.  Based on the patient's dose of Dexamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ...",
+      "rationale_index": 0,
+      "expected_answer": "140.018"
+    },
+    {
+      "index": 1135,
+      "calc_name": "Morphine Milligram Equivalents (MME) Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 144, in compute_steroid_conversion_explanation\n    from_multiplier = conversion_dict[input_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "The patient takes 20 mg of Methadone 2 times a day, 10 mg of Tapentadol 2 times a day, and 30 mg of OxyMORphone 2 times a day. Based on the number of doses per day and the quantity of different doses,...",
+      "rationale_index": 1,
+      "expected_answer": "376.0"
+    },
+    {
+      "index": 1139,
+      "calc_name": "Morphine Milligram Equivalents (MME) Calculator",
+      "error_type": "KeyError",
+      "error_message": "'Prednisone PO'",
+      "error_trace": "Traceback (most recent call last):\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/zikai.py\", line 41, in execute_rationale_code\n    exec(code, globals(), local_vars)\n  File \"<string>\", line 11, in <module>\n  File \"/Users/zack/PycharmProjects/camel_new/camel_new/camel/toolkits/medcalc_bench/steroid_conversion.py\", line 144, in compute_steroid_conversion_explanation\n    from_multiplier = conversion_dict[input_drug_name]\nKeyError: 'Prednisone PO'\n",
+      "code_snippet": "# steroid_conversion function call:...",
+      "question": "The patient takes 50 mg of OxyMORphone 2 times a day, 40 mg of Methadone 3 times a day, and 30 mg of FentANYL patch 1 time a day. Based on the number of doses per day and the quantity of different dos...",
+      "rationale_index": 2,
+      "expected_answer": "936.0"
+    }
+  ]
+}

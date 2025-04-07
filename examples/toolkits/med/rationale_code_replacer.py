@@ -357,19 +357,8 @@ def format_args_for_function(tool_name, args):
             formatted_args['target steroid'] = f"{args['target_drug']} {args['target_route']}"
             
         # 如果target steroid不存在，尝试从问题文本中设置默认值
-        if 'target steroid' not in formatted_args and 'question' in args:
-            question_text = args['question']
-            # 尝试匹配目标药物
-            # 匹配 "what is the equivalent dose of Target Route?"
-            pattern = r"equivalent dose of (\w+)(?: (\w+))?"
-            match = re.search(pattern, question_text, re.IGNORECASE)
-            if match:
-                drug_name = match.group(1)
-                route = match.group(2) if match.group(2) else "PO"  # 默认口服
-                formatted_args['target steroid'] = f"{drug_name} {route}"
-            else:
-                # 默认值
-                formatted_args['target steroid'] = "Prednisone PO"
+        if 'target steroid' not in formatted_args:
+            formatted_args['target steroid'] = formatted_args["target_steroid"]
                 
         # 如果还是没有target steroid，创建默认值
         if 'target steroid' not in formatted_args:
@@ -788,7 +777,8 @@ def generate_direct_code(tool_name, args, function_map):
     
     # 根据工具类型格式化参数
     formatted_args = format_args_for_function(tool_name, args)
-    
+    if tool_name == "steroid_conversion":
+        print(formatted_args)
     # 构建参数字符串，保持可读性
     args_lines = []
     for key, value in formatted_args.items():
@@ -891,9 +881,20 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='将JSON文件中的rationale替换为函数调用代码')
-    parser.add_argument('input', help='输入JSON文件路径', nargs='?')  # 使参数可选
-    parser.add_argument('-o', '--output', help='输出JSON文件路径')
-    parser.add_argument('-d', '--debug', action='store_true', help='调试模式，显示所有工具映射')
+    # 设置默认输入路径
+    default_input = "/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/med/output.json"
+    parser.add_argument('input', 
+                        help='输入JSON文件路径', 
+                        nargs='?',  # 使参数可选
+                        default=default_input)  
+    # 设置默认输出路径
+    default_output = "/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/med/output_code_replaced_zikai.json"
+    parser.add_argument('-o', '--output', 
+                        help='输出JSON文件路径',
+                        default=default_output)
+    parser.add_argument('-d', '--debug', 
+                        action='store_true', 
+                        help='调试模式，显示所有工具映射')
     
     args = parser.parse_args()
     
@@ -901,10 +902,6 @@ def main():
     if args.debug:
         debug_tool_mappings()
         return 0
-    
-    if not args.input:
-        print("错误: 需要提供输入文件路径")
-        return 1
     
     if not os.path.isfile(args.input):
         print(f"错误: 文件 '{args.input}' 不存在")
@@ -917,4 +914,4 @@ def main():
     return 0
 
 if __name__ == "__main__":
-    sys.exit(main()) 
+    sys.exit(main())
