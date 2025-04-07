@@ -168,8 +168,8 @@ def analyze_errors(error_log_file):
 
 def main():
     # 设置默认参数
-    default_json_file = "/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/med/output_code_replaced_zikai.json"
-    default_log_file = "/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/med/med.log"
+    default_json_file = "output_code_replaced.json"
+    default_log_file = "med.log"
     
     # 如果没有提供参数，使用默认值
     if len(sys.argv) < 2:

@@ -3,6 +3,9 @@ import os
 import sys
 import inspect
 import re  # 导入re模块，确保全局可用
+from datetime import date
+import importlib
+import math
 
 # 导入所有函数
 from examples.toolkits.med.moudles import *
@@ -318,7 +321,10 @@ def format_args_for_function(tool_name, args):
         # 按照compute_steroid_conversion_explanation需要的格式组织参数
         # 修复input steroid参数
         if 'source_drug' in args and 'source_route' in args:
-            drug_name = f"{args['source_drug']} {args['source_route']}"
+            # 统一药物名称的大小写格式
+            source_drug = args['source_drug']
+            # 特殊处理药物名称中的大小写，所有药物名称需要转换为首字母大写其他小写以匹配conversion_dict的键
+            drug_name = f"{source_drug} {args['source_route']}"
             dose_value = None
             dose_unit = 'mg'
             
@@ -331,38 +337,32 @@ def format_args_for_function(tool_name, args):
             elif 'dose_value' in args and 'dose_unit' in args:
                 dose_value = args['dose_value']
                 dose_unit = args['dose_unit']
-                
+            elif 'dose' in args:
+                if isinstance(args['dose'], (int, float)):
+                    dose_value = args['dose']
+                elif isinstance(args['dose'], (list, tuple)) and len(args['dose']) == 2:
+                    dose_value = args['dose'][0]
+                    dose_unit = args['dose'][1]
+                    
             if dose_value is not None:
                 formatted_args['input steroid'] = [drug_name, dose_value, dose_unit]
-        
-        # 如果input steroid不存在，尝试从问题文本中提取
-        if 'input steroid' not in formatted_args and 'question' in args:
-            question_text = args['question']
-            # 尝试匹配常见的固醇药物模式
-            # 匹配 "Patient has taken X mg of Drug Route"
-            pattern1 = r"Patient has taken (\d+(?:\.\d+)?) mg of (\w+) (\w+)"
-            match = re.search(pattern1, question_text)
-            if match:
-                dose_value = float(match.group(1))
-                drug_name = match.group(2)
-                route = match.group(3)
-                formatted_args['input steroid'] = [f"{drug_name} {route}", dose_value, "mg"]
-            
-        # 如果还是没有input steroid，创建默认值
-        if 'input steroid' not in formatted_args:
-            formatted_args['input steroid'] = ["Prednisone PO", 10, "mg"]
                 
         # 处理目标药物参数
         if 'target_drug' in args and 'target_route' in args:
-            formatted_args['target steroid'] = f"{args['target_drug']} {args['target_route']}"
+            # 统一药物名称的大小写格式
+            target_drug = args['target_drug']
+            formatted_args['target steroid'] = f"{target_drug} {args['target_route']}"
+        
+        # 如果没有提供足够的参数，尝试使用默认值
+        if 'input steroid' not in formatted_args:
+            # 设置默认值 - 但这不是一个好的解决方案，应当在更上游处理
+            formatted_args['input steroid'] = ["Hydrocortisone PO", 100.0, "mg"]
+            print(f"警告: 使用默认值 {formatted_args['input steroid']} 作为输入甾体药物")
             
-        # 如果target steroid不存在，尝试从问题文本中设置默认值
         if 'target steroid' not in formatted_args:
-            formatted_args['target steroid'] = formatted_args["target_steroid"]
-                
-        # 如果还是没有target steroid，创建默认值
-        if 'target steroid' not in formatted_args:
-            formatted_args['target steroid'] = "Prednisone PO"
+            # 设置默认值
+            formatted_args['target steroid'] = "PrednisoLONE PO"
+            print(f"警告: 使用默认值 {formatted_args['target steroid']} 作为目标甾体药物")
     
     elif tool_name in ['conception_date', 'conception', 'estimated_conception']:
         # 修复conception_date参数
@@ -370,33 +370,12 @@ def format_args_for_function(tool_name, args):
             formatted_args['menstrual_date'] = args['last_menstrual_period']
         elif 'lmp' in args:
             formatted_args['menstrual_date'] = args['lmp']
-            
-        # 如果menstrual_date不存在，尝试从问题文本中提取
-        if 'menstrual_date' not in formatted_args and 'question' in args:
-            question_text = args['question']
-            # 尝试匹配常见的月经周期模式
-            pattern = r"last menstrual period was on (\d{1,2}/\d{1,2}/\d{4}|\d{1,2}-\d{1,2}-\d{4})"
-            match = re.search(pattern, question_text, re.IGNORECASE)
-            if match:
-                formatted_args['menstrual_date'] = match.group(1)
+        elif 'menstrual_date' in args:
+            formatted_args['menstrual_date'] = args['menstrual_date']
                 
-        # 添加cycle_length参数
+        # 添加cycle_length参数，但只在参数中提供时
         if 'cycle_length' in args:
             formatted_args['cycle_length'] = args['cycle_length']
-        # 如果cycle_length不存在，尝试从问题文本中提取
-        elif 'question' in args:
-            question_text = args['question']
-            # 尝试匹配常见的周期长度模式
-            pattern = r"cycle length is (\d+) days"
-            match = re.search(pattern, question_text, re.IGNORECASE)
-            if match:
-                formatted_args['cycle_length'] = int(match.group(1))
-            else:
-                # 默认周期长度
-                formatted_args['cycle_length'] = 28
-        else:
-            # 默认周期长度
-            formatted_args['cycle_length'] = 28
     
     elif tool_name in ['estimated_due_date', 'edd', 'due_date']:
         # 修复estimated_due_date参数 - 实际需要的参数是menstrual_date
@@ -404,48 +383,36 @@ def format_args_for_function(tool_name, args):
             formatted_args['menstrual_date'] = args['last_menstrual_period']
         elif 'lmp' in args:
             formatted_args['menstrual_date'] = args['lmp']
-            
-        # 如果menstrual_date不存在，尝试从问题文本中提取
-        if 'menstrual_date' not in formatted_args and 'question' in args:
-            question_text = args['question']
-            # 尝试匹配常见的月经周期模式
-            pattern = r"last menstrual period was on (\d{1,2}/\d{1,2}/\d{4}|\d{1,2}-\d{1,2}-\d{4})"
-            match = re.search(pattern, question_text, re.IGNORECASE)
-            if match:
-                formatted_args['menstrual_date'] = match.group(1)
+        elif 'menstrual_date' in args:
+            formatted_args['menstrual_date'] = args['menstrual_date']
         
-        # 添加cycle_length参数，从问题中提取或使用默认值
+        # 添加cycle_length参数，但只在参数中提供时
         if 'cycle_length' in args:
             formatted_args['cycle_length'] = args['cycle_length']
-        elif 'question' in args:
-            question_text = args['question']
-            # 尝试匹配常见的周期长度模式
-            pattern = r"cycle length is (\d+) days"
-            match = re.search(pattern, question_text, re.IGNORECASE)
-            if match:
-                formatted_args['cycle_length'] = int(match.group(1))
-            else:
-                # 默认周期长度
-                formatted_args['cycle_length'] = 28
-        else:
-            # 默认周期长度
-            formatted_args['cycle_length'] = 28
     
     elif tool_name in ['target_weight', 'targetweight']:
-        # 修复target_weight参数 - body_mass_index改用默认值和动态计算
+        # 修复target_weight参数 - 只使用提供的参数
         if 'height_value' in args and 'height_unit' in args:
             formatted_args['height'] = (args['height_value'], args['height_unit'])
         elif 'height' in args and isinstance(args['height'], list) and len(args['height']) == 2:
             formatted_args['height'] = tuple(args['height'])
         
-        # 提供一个默认的BMI值
+        # 添加 body_mass_index 参数，确保总是提供
         if 'target_bmi' in args:
             formatted_args['body_mass_index'] = (args['target_bmi'], 'kg/m^2')
         elif 'bmi' in args:
-            formatted_args['body_mass_index'] = (args['bmi'], 'kg/m^2')
+            if isinstance(args['bmi'], (list, tuple)) and len(args['bmi']) == 2:
+                formatted_args['body_mass_index'] = tuple(args['bmi'])
+            else:
+                formatted_args['body_mass_index'] = (args['bmi'], 'kg/m^2')
+        elif 'body_mass_index' in args:
+            if isinstance(args['body_mass_index'], (list, tuple)) and len(args['body_mass_index']) == 2:
+                formatted_args['body_mass_index'] = tuple(args['body_mass_index'])
+            else:
+                formatted_args['body_mass_index'] = (args['body_mass_index'], 'kg/m^2')
         else:
-            # 提供一个健康BMI范围的平均值作为默认值
-            formatted_args['body_mass_index'] = (22.5, 'kg/m^2')
+            # 如果没有提供BMI值，使用健康体重的BMI值
+            formatted_args['body_mass_index'] = (22.0, 'kg/m^2')
     
     elif tool_name in ['fibrosis_4', 'fib4', 'fibrosis4']:
         # 修复fibrosis_4参数
@@ -469,35 +436,6 @@ def format_args_for_function(tool_name, args):
             formatted_args['platelet_count'] = tuple(args['platelet'])
         elif 'platelet_value' in args and 'platelet_unit' in args:
             formatted_args['platelet_count'] = (args['platelet_value'], args['platelet_unit'])
-        
-        # 确保platelet_count参数存在，如果不存在则添加默认值
-        if 'platelet_count' not in formatted_args:
-            # 默认值设置为中等范围的正常值
-            formatted_args['platelet_count'] = (150000, 'µL')
-            # 如果有question字段，尝试从问题中提取血小板计数
-            if 'question' in args:
-                question_text = args['question']
-                # 尝试匹配常见的血小板计数模式
-                patterns = [
-                    r'platelet(?:s)?\s+(?:count\s+)?(?:of\s+)?(\d+(?:,\d+)*(?:\.\d+)?)\s*(?:×\s*)?(?:10\^3|10³|10\*\*3)?(?:/[µu]L)',
-                    r'platelet(?:s)?\s+(?:count\s+)?(?:of\s+)?(\d+(?:,\d+)*(?:\.\d+)?)\s*(?:×\s*)?(?:10\^9|10⁹|10\*\*9)?(?:/L)',
-                    r'platelet(?:s)?\s+(?:count\s+)?(?:of\s+)?(\d+(?:,\d+)*(?:\.\d+)?)\s*k(?:/[µu]L)',
-                    r'platelets?(?:\s+count)?\s+(\d+(?:,\d+)*(?:\.\d+)?)\s*(?:×\s*)?(?:10\^3|10³|10\*\*3)?'
-                ]
-                
-                for pattern in patterns:
-                    match = re.search(pattern, question_text, re.IGNORECASE)
-                    if match:
-                        value_str = match.group(1).replace(',', '')
-                        try:
-                            value = float(value_str)
-                            # 根据单位调整值
-                            if "×10^9/L" in question_text or "×10⁹/L" in question_text:
-                                value = value * 1000  # 转换为每微升
-                            formatted_args['platelet_count'] = (value, 'µL')
-                            break
-                        except ValueError:
-                            pass
     
     elif tool_name in ['qt_calculator_fredericia', 'qt_fredericia']:
         # 修复QT计算器参数 - 修复qt_interval参数
@@ -521,19 +459,8 @@ def format_args_for_function(tool_name, args):
             formatted_args['age'] = tuple(args['age'])
         elif 'age' in args and not isinstance(args['age'], (list, tuple)):
             formatted_args['age'] = (args['age'], 'years')
-        else:
-            # 从问题中尝试提取年龄，或设置默认值
-            if 'question' in args:
-                question_text = args['question']
-                pattern = r"(\d+)[- ]year[-\s]old"
-                match = re.search(pattern, question_text)
-                if match:
-                    formatted_args['age'] = (int(match.group(1)), 'years')
-                else:
-                    formatted_args['age'] = (35, 'years')  # 默认年龄
-            else:
-                formatted_args['age'] = (35, 'years')  # 默认年龄
         
+        # 确保温度参数存在，从问题文本中解析或提供默认值
         if 'temperature_value' in args and 'temperature_unit' in args:
             formatted_args['temperature'] = (args['temperature_value'], args['temperature_unit'])
         elif 'temperature' in args and isinstance(args['temperature'], list) and len(args['temperature']) == 2:
@@ -541,36 +468,12 @@ def format_args_for_function(tool_name, args):
         elif 'temperature' in args and not isinstance(args['temperature'], (list, tuple)):
             formatted_args['temperature'] = (args['temperature'], '°C')
         else:
-            # 从问题中尝试提取温度，或设置默认值
-            if 'question' in args:
-                question_text = args['question']
-                pattern = r"temperature (?:of|is) (\d+(?:\.\d+)?)"
-                match = re.search(pattern, question_text)
-                if match:
-                    formatted_args['temperature'] = (float(match.group(1)), '°C')
-                else:
-                    formatted_args['temperature'] = (37.5, '°C')  # 默认温度
-            else:
-                formatted_args['temperature'] = (37.5, '°C')  # 默认温度
-        
-        # 设置默认值，防止KeyError
-        formatted_args['exudate_swelling_tonsils'] = False
-        formatted_args['tender_lymph_nodes'] = False 
-        formatted_args['cough_absent'] = False
+            # 如果没有提供温度，使用默认值 37°C (98.6°F) - 正常体温
+            formatted_args['temperature'] = (37.0, '°C')
         
         for param in ['exudate_swelling_tonsils', 'tender_lymph_nodes', 'cough_absent']:
             if param in args:
                 formatted_args[param] = args[param]
-                
-        # 从问题中尝试提取症状信息
-        if 'question' in args:
-            question_text = args['question']
-            if 'tonsillar exudate' in question_text.lower() or 'swollen tonsils' in question_text.lower():
-                formatted_args['exudate_swelling_tonsils'] = True
-            if 'tender anterior cervical adenopathy' in question_text.lower() or 'swollen lymph nodes' in question_text.lower():
-                formatted_args['tender_lymph_nodes'] = True
-            if 'absence of cough' in question_text.lower() or 'no cough' in question_text.lower():
-                formatted_args['cough_absent'] = True
     
     elif tool_name in ['sirs_criteria', 'sirs']:
         # 修复sirs_criteria参数
@@ -580,9 +483,6 @@ def format_args_for_function(tool_name, args):
             formatted_args['temperature'] = tuple(args['temperature'])
         elif 'temperature' in args and not isinstance(args['temperature'], (list, tuple)):
             formatted_args['temperature'] = (args['temperature'], '°C')
-        else:
-            # 默认温度值
-            formatted_args['temperature'] = (37, '°C')
         
         if 'heart_rate_value' in args and 'heart_rate_unit' in args:
             formatted_args['heart_rate'] = (args['heart_rate_value'], args['heart_rate_unit'])
@@ -590,9 +490,6 @@ def format_args_for_function(tool_name, args):
             formatted_args['heart_rate'] = tuple(args['heart_rate'])
         elif 'heart_rate' in args and not isinstance(args['heart_rate'], (list, tuple)):
             formatted_args['heart_rate'] = (args['heart_rate'], 'beats/min')
-        else:
-            # 默认心率值
-            formatted_args['heart_rate'] = (80, 'beats/min')
         
         if 'wbc_value' in args and 'wbc_unit' in args:
             formatted_args['wbc'] = (args['wbc_value'], args['wbc_unit'])
@@ -600,9 +497,6 @@ def format_args_for_function(tool_name, args):
             formatted_args['wbc'] = tuple(args['wbc'])
         elif 'wbc' in args and not isinstance(args['wbc'], (list, tuple)):
             formatted_args['wbc'] = (args['wbc'], 'cells/µL')
-        else:
-            # 默认白细胞计数
-            formatted_args['wbc'] = (10000, 'cells/µL')
         
         # 确保respiratory_rate有正确的格式
         if 'respiratory_rate_value' in args and 'respiratory_rate_unit' in args:
@@ -611,9 +505,6 @@ def format_args_for_function(tool_name, args):
             formatted_args['respiratory_rate'] = tuple(args['respiratory_rate'])
         elif 'respiratory_rate' in args and not isinstance(args['respiratory_rate'], (list, tuple)):
             formatted_args['respiratory_rate'] = (args['respiratory_rate'], 'breaths/min')
-        else:
-            # 默认呼吸率
-            formatted_args['respiratory_rate'] = (18, 'breaths/min')
         
         # 确保paco2有正确的格式
         if 'paco2_value' in args and 'paco2_unit' in args:
@@ -622,12 +513,10 @@ def format_args_for_function(tool_name, args):
             formatted_args['paco2'] = tuple(args['paco2'])
         elif 'paco2' in args and not isinstance(args['paco2'], (list, tuple)):
             formatted_args['paco2'] = (args['paco2'], 'mmHg')
-        else:
-            # 默认paco2值
-            formatted_args['paco2'] = (40, 'mmHg')
     
     elif tool_name in ['ldl_calculated', 'ldl']:
-        # 修复ldl_calculated参数 - 修复total_cholestrol为total_cholesterol
+        # 修复ldl_calculated参数 - 确保使用total_cholestrol作为键名
+        # 处理总胆固醇参数 - 确保键名正确性
         if 'cholesterol_value' in args and 'cholesterol_unit' in args:
             formatted_args['total_cholestrol'] = (args['cholesterol_value'], args['cholesterol_unit'])
         elif 'total_cholesterol_value' in args and 'total_cholesterol_unit' in args:
@@ -636,76 +525,139 @@ def format_args_for_function(tool_name, args):
             formatted_args['total_cholestrol'] = (args['total_cholestrol_value'], args['total_cholestrol_unit'])
         elif 'cholesterol' in args and isinstance(args['cholesterol'], list) and len(args['cholesterol']) == 2:
             formatted_args['total_cholestrol'] = tuple(args['cholesterol'])
-        else:
-            # 从问题中尝试提取总胆固醇值，或设置默认值
-            if 'question' in args:
-                question_text = args['question']
-                pattern = r"total cholesterol (?:of|is) (\d+(?:\.\d+)?)"
-                match = re.search(pattern, question_text)
-                if match:
-                    formatted_args['total_cholestrol'] = (float(match.group(1)), 'mg/dL')
-                else:
-                    # 默认总胆固醇值
-                    formatted_args['total_cholestrol'] = (200, 'mg/dL')
-            else:
-                # 默认总胆固醇值
-                formatted_args['total_cholestrol'] = (200, 'mg/dL')
+        elif 'total_cholesterol' in args and isinstance(args['total_cholesterol'], list) and len(args['total_cholesterol']) == 2:
+            formatted_args['total_cholestrol'] = tuple(args['total_cholesterol'])
+        # 尝试查找其他可能的键名
+        elif 'tc_value' in args and 'tc_unit' in args:
+            formatted_args['total_cholestrol'] = (args['tc_value'], args['tc_unit'])
+        elif 'tc' in args and isinstance(args['tc'], list) and len(args['tc']) == 2:
+            formatted_args['total_cholestrol'] = tuple(args['tc'])
+            
+        # 当所有方法都找不到时，使用默认值
+        if 'total_cholestrol' not in formatted_args:
+            # 使用默认的正常胆固醇水平数值
+            formatted_args['total_cholestrol'] = (200.0, 'mg/dL')
         
+        # 处理HDL胆固醇参数
         if 'hdl_value' in args and 'hdl_unit' in args:
             formatted_args['hdl_cholestrol'] = (args['hdl_value'], args['hdl_unit'])
         elif 'hdl_cholesterol_value' in args and 'hdl_cholesterol_unit' in args:
             formatted_args['hdl_cholestrol'] = (args['hdl_cholesterol_value'], args['hdl_cholesterol_unit'])
+        elif 'hdl_cholestrol_value' in args and 'hdl_cholestrol_unit' in args:
+            formatted_args['hdl_cholestrol'] = (args['hdl_cholestrol_value'], args['hdl_cholestrol_unit'])
         elif 'hdl' in args and isinstance(args['hdl'], list) and len(args['hdl']) == 2:
             formatted_args['hdl_cholestrol'] = tuple(args['hdl'])
-        else:
-            # 从问题中尝试提取HDL值，或设置默认值
-            if 'question' in args:
-                question_text = args['question']
-                pattern = r"HDL (?:of|is) (\d+(?:\.\d+)?)"
-                match = re.search(pattern, question_text)
-                if match:
-                    formatted_args['hdl_cholestrol'] = (float(match.group(1)), 'mg/dL')
-                else:
-                    # 默认HDL值
-                    formatted_args['hdl_cholestrol'] = (50, 'mg/dL')
-            else:
-                # 默认HDL值
-                formatted_args['hdl_cholestrol'] = (50, 'mg/dL')
+        elif 'hdl_cholesterol' in args and isinstance(args['hdl_cholesterol'], list) and len(args['hdl_cholesterol']) == 2:
+            formatted_args['hdl_cholestrol'] = tuple(args['hdl_cholesterol'])
+            
+        # 当所有方法都找不到时，使用默认值
+        if 'hdl_cholestrol' not in formatted_args:
+            # 使用默认的HDL胆固醇水平数值
+            formatted_args['hdl_cholestrol'] = (50.0, 'mg/dL')
         
+        # 处理甘油三酯参数
         if 'triglycerides_value' in args and 'triglycerides_unit' in args:
             formatted_args['triglycerides'] = (args['triglycerides_value'], args['triglycerides_unit'])
         elif 'triglycerides' in args and isinstance(args['triglycerides'], list) and len(args['triglycerides']) == 2:
             formatted_args['triglycerides'] = tuple(args['triglycerides'])
-        else:
-            # 从问题中尝试提取甘油三酯值，或设置默认值
-            if 'question' in args:
-                question_text = args['question']
-                pattern = r"triglycerides (?:of|is) (\d+(?:\.\d+)?)"
-                match = re.search(pattern, question_text)
-                if match:
-                    formatted_args['triglycerides'] = (float(match.group(1)), 'mg/dL')
-                else:
-                    # 默认甘油三酯值
-                    formatted_args['triglycerides'] = (150, 'mg/dL')
-            else:
-                # 默认甘油三酯值
-                formatted_args['triglycerides'] = (150, 'mg/dL')
+        elif 'triglyceride' in args and isinstance(args['triglyceride'], list) and len(args['triglyceride']) == 2:
+            formatted_args['triglycerides'] = tuple(args['triglyceride'])
+        elif 'triglyceride_value' in args and 'triglyceride_unit' in args:
+            formatted_args['triglycerides'] = (args['triglyceride_value'], args['triglyceride_unit'])
+        elif 'tg_value' in args and 'tg_unit' in args:
+            formatted_args['triglycerides'] = (args['tg_value'], args['tg_unit'])
+        elif 'tg' in args and isinstance(args['tg'], list) and len(args['tg']) == 2:
+            formatted_args['triglycerides'] = tuple(args['tg'])
+            
+        # 当所有方法都找不到时，使用默认值
+        if 'triglycerides' not in formatted_args:
+            # 使用默认的三酸甘油酯水平数值
+            formatted_args['triglycerides'] = (150.0, 'mg/dL')
     
     elif tool_name in ['mme', 'morphine_milligram_equivalent']:
-        # 修复mme参数
-        if 'drug' in args:
-            formatted_args['drug'] = args['drug']
+        # 修复mme参数，特别注意药物名称的大小写
+        # 药物名称的特殊大小写映射
+        drug_name_case_map = {
+            "fentanyl": "FentaNYL",
+            "fentanyl buccal": "FentaNYL buccal",
+            "fentanyl patch": "FentaNYL patch",
+            "hydrocodone": "HYDROcodone",
+            "hydromorphone": "HYDROmorphone",
+            "oxycodone": "OxyCODONE",
+            "oxymorphone": "OxyMORphone",
+            "tramadol": "TraMADol",
+            "codeine": "Codeine", 
+            "methadone": "Methadone",
+            "morphine": "Morphine",
+            "tapentadol": "Tapentadol",
+            "buprenorphine": "Buprenorphine"
+        }
         
-        if 'dose_value' in args and 'dose_unit' in args:
-            formatted_args['dose'] = (args['dose_value'], args['dose_unit'])
-        elif 'dose' in args and isinstance(args['dose'], list) and len(args['dose']) == 2:
-            formatted_args['dose'] = tuple(args['dose'])
+        # 检查原始参数中是否已经有正确格式的参数
+        drug_keys = [key for key in args.keys() if ('dose' in key.lower() and ' dose' in key.lower()) or ('per day' in key.lower() and ' per day' in key.lower())]
         
-        if 'route' in args:
-            formatted_args['route'] = args['route']
-        
-        if 'frequency' in args:
-            formatted_args['frequency'] = args['frequency']
+        # 如果已经存在标准格式的参数，直接使用但确保药物名称大小写正确
+        if any(' Dose' in key for key in drug_keys) and any(' Dose Per Day' in key for key in drug_keys):
+            for key in drug_keys:
+                if ' Dose' in key:
+                    # 提取药物名称
+                    drug_name = key.split(' Dose')[0]
+                    # 检查并纠正药物名称大小写
+                    drug_name_lower = drug_name.lower()
+                    if drug_name_lower in drug_name_case_map:
+                        corrected_drug_name = drug_name_case_map[drug_name_lower]
+                        corrected_key = f"{corrected_drug_name} Dose"
+                        dose_per_day_key = f"{corrected_drug_name} Dose Per Day"
+                        
+                        # 处理剂量值
+                        if isinstance(args[key], (list, tuple)) and len(args[key]) == 2:
+                            formatted_args[corrected_key] = tuple(args[key])
+                        else:
+                            # 尝试找到单位
+                            if key + '_unit' in args:
+                                formatted_args[corrected_key] = (args[key], args[key + '_unit'])
+                            else:
+                                formatted_args[corrected_key] = (args[key], 'mg')
+                        
+                        # 处理每日剂量
+                        day_key = f"{drug_name} Dose Per Day"
+                        if day_key in args:
+                            if isinstance(args[day_key], (list, tuple)) and len(args[day_key]) == 2:
+                                formatted_args[dose_per_day_key] = tuple(args[day_key])
+                            else:
+                                formatted_args[dose_per_day_key] = (args[day_key], 'per day')
+        # 处理其他格式的参数
+        else:
+            # 如果有明确的drug参数
+            if 'drug' in args:
+                drug_name = args['drug']
+                # 处理特殊情况：药物名称中的特殊大小写
+                drug_name_lower = drug_name.lower()
+                if drug_name_lower in drug_name_case_map:
+                    drug_name = drug_name_case_map[drug_name_lower]
+                
+                # 查找对应的剂量信息
+                if 'dose' in args:
+                    if isinstance(args['dose'], (list, tuple)) and len(args['dose']) == 2:
+                        formatted_args[drug_name + ' Dose'] = tuple(args['dose'])
+                    elif 'dose_unit' in args:
+                        formatted_args[drug_name + ' Dose'] = (args['dose'], args['dose_unit'])
+                    else:
+                        formatted_args[drug_name + ' Dose'] = (args['dose'], 'mg')
+                
+                # 查找对应的频率信息
+                if 'frequency' in args:
+                    if isinstance(args['frequency'], (int, float)):
+                        formatted_args[drug_name + ' Dose Per Day'] = (args['frequency'], 'per day')
+                    else:
+                        formatted_args[drug_name + ' Dose Per Day'] = args['frequency']
+                elif 'per_day' in args:
+                    if isinstance(args['per_day'], (int, float)):
+                        formatted_args[drug_name + ' Dose Per Day'] = (args['per_day'], 'per day')
+                    else:
+                        formatted_args[drug_name + ' Dose Per Day'] = args['per_day']
+                else:
+                    formatted_args[drug_name + ' Dose Per Day'] = (1, 'per day')  # 默认每天一次
     
     else:
         # 默认情况下，尝试将可能是元组的参数转换为正确格式
@@ -737,6 +689,10 @@ def generate_direct_code(tool_name, args, function_map):
     Returns:
         str: 生成的代码
     """
+    # 针对MME错误调用steroid_conversion的问题进行修复
+    if "calc_name" in args and args["calc_name"] == "Morphine Milligram Equivalents (MME) Calculator":
+        tool_name = "mme"  # 强制使用正确的工具
+    
     # 处理特定的工具名变体 
     if tool_name == "qt_calculator_bazett" and tool_name not in function_map and "qt_bazett" in function_map:
         tool_name = "qt_bazett"
@@ -838,10 +794,7 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
                 if "tool_name" in rationale_item and "args" in rationale_item:
                     tool_name = rationale_item["tool_name"]
                     args = rationale_item["args"]
-                    
-                    # 如果存在问题文本，则添加到args中，以便从中提取信息
-                    if "usr_msg" in item:
-                        args["question"] = item["usr_msg"]
+          
                     
                     # 特殊处理某些工具名
                     if tool_name == "ckd_epi_2021_creatinine" and tool_name not in function_map:
@@ -876,19 +829,129 @@ def replace_rationale_with_code_in_json(input_file, output_file=None):
     
     return output_file
 
+def get_tool_name_from_question(question, args=None):
+    """
+    从问题或输入参数中提取工具名称
+    
+    Args:
+        question: 问题文本
+        args: 可选的参数字典
+    
+    Returns:
+        str: 识别的工具名
+    """
+    if args and "calc_name" in args:
+        # 首先查看是否有明确指定的计算名称
+        calc_name = args["calc_name"]
+        if "Steroid Conversion" in calc_name:
+            return "steroid_conversion"
+        elif "Morphine Milligram Equivalents" in calc_name or "MME" in calc_name:
+            return "mme"
+        elif "LDL" in calc_name:
+            return "ldl_calculated"
+        # 可以添加更多映射...
+    
+    # 工具名称映射表
+    tool_patterns = {
+        r'steroid\s+conversion|equivalent\s+dosage|convert.*steroid': 'steroid_conversion',
+        r'mme|morphine\s+milligram\s+equivalent': 'mme',
+        r'ldl|low\s+density\s+lipoprotein|cholesterol': 'ldl_calculated',
+        r'creatinine\s+clearance|cockcroft\s+gault': 'creatinine_clearance',
+        r'ckd\s+epi|egfr': 'ckd_epi_2021_creatinine',
+        r'conception\s+date': 'conception_date',
+        r'due\s+date|edd': 'estimated_due_date',
+        r'target\s+weight': 'target_weight',
+        r'fibrosis\s+4|fib\s*-?\s*4': 'fibrosis_4',
+        r'qt\s+calculator.*fredericia': 'qt_calculator_fredericia',
+        r'qt\s+calculator.*bazett': 'qt_calculator_bazett',
+        r'qt\s+calculator.*framingham': 'qt_calculator_framingham',
+        r'centor\s+score': 'centor_score',
+        r'sirs\s+criteria': 'sirs_criteria',
+        # 可以添加更多工具的识别模式
+    }
+    
+    for pattern, tool_name in tool_patterns.items():
+        if re.search(pattern, question, re.IGNORECASE):
+            return tool_name
+    
+    # 未识别到工具名
+    return None
+
+def execute_rationale_code(rationale, question, rationale_index=None):
+    """
+    执行医学推理代码，处理各种转换和调用
+    
+    Args:
+        rationale: rationale文本
+        question: 问题文本
+        rationale_index: 使用的rationale索引
+    
+    Returns:
+        tuple: (结果, 错误信息)
+    """
+    # 获取工具名到函数的映射
+    function_mapping = get_function_mapping_from_modules()
+    
+    # 解析rationale中的参数
+    args = parse_args_from_rationale(rationale, None)
+    
+    # 获取问题中提到的工具名
+    tool_name = get_tool_name_from_question(question, args)
+    if not tool_name:
+        return None, "无法从问题中识别医学计算工具"
+    
+    # 修复工具名 - 特殊处理MME被错误地识别为steroid_conversion的情况
+    if "calc_name" in args and "Morphine Milligram Equivalents" in args["calc_name"]:
+        tool_name = "mme"  # 强制使用正确的工具
+    
+    # 如果rationale_index存在，从rationale中解析工具名
+    if rationale_index is not None:
+        code_comments = find_all_code_sections(rationale, tool_name=None)
+        if code_comments and 0 <= rationale_index < len(code_comments):
+            code_comment = code_comments[rationale_index]
+            lines = code_comment.strip().split("\n")
+            
+            # 确保代码段开始于工具函数调用注释
+            if lines and "function call" in lines[0]:
+                actual_tool_name = lines[0].split("function call:")[0].replace("#", "").strip()
+                if actual_tool_name and actual_tool_name != tool_name:
+                    # 特别处理MME和steroid_conversion的冲突
+                    if not (actual_tool_name == "steroid_conversion" and "calc_name" in args and "MME" in args["calc_name"]):
+                        # 如果识别出的工具名与注释中的工具名不匹配，优先使用注释中的
+                        tool_name = actual_tool_name
+    
+    # 格式化参数以适应函数需求
+    formatted_args = format_args_for_function(tool_name, args)
+    
+    # 调用相应的函数
+    if tool_name in function_mapping:
+        function = function_mapping[tool_name]
+        try:
+            result = function(formatted_args)
+            
+            # 返回结果
+            if isinstance(result, dict) and "Answer" in result:
+                return result["Answer"], None
+            return result, None
+        except Exception as e:
+            import traceback
+            return None, f"执行{tool_name}函数时出错: {str(e)}\n{traceback.format_exc()}"
+    else:
+        return None, f"未找到名为'{tool_name}'的医学计算工具函数"
+
 def main():
     """命令行接口"""
     import argparse
     
     parser = argparse.ArgumentParser(description='将JSON文件中的rationale替换为函数调用代码')
     # 设置默认输入路径
-    default_input = "/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/med/output.json"
+    default_input = "output_filtered.json"
     parser.add_argument('input', 
                         help='输入JSON文件路径', 
                         nargs='?',  # 使参数可选
                         default=default_input)  
     # 设置默认输出路径
-    default_output = "/Users/zack/PycharmProjects/camel_new/camel_new/examples/toolkits/med/output_code_replaced_zikai.json"
+    default_output = "output_code_replaced.json"
     parser.add_argument('-o', '--output', 
                         help='输出JSON文件路径',
                         default=default_output)
