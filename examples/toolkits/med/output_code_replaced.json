@@ -8506,7 +8506,7 @@
     {
         "usr_msg": "Patient has a height of 1.91 m and their target BMI is 24.4 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (191, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (191, 'cm'),  # height\n    \"body_mass_index\": (24.4, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "89.014",
         "metadata": {
@@ -8528,7 +8528,7 @@
     {
         "usr_msg": "Patient has a height of 72 in and their target BMI is 20.1 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (72, 'in'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (72, 'in'),  # height\n    \"body_mass_index\": (20.1, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "67.239",
         "metadata": {
@@ -8561,7 +8561,7 @@
     {
         "usr_msg": "Patient has a height of 175 cm and their target BMI is 20.2 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (175, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (175, 'cm'),  # height\n    \"body_mass_index\": (20.2, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "61.862",
         "metadata": {
@@ -8572,7 +8572,7 @@
     {
         "usr_msg": "Patient has a height of 155 cm and their target BMI is 19.4 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (155, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (155, 'cm'),  # height\n    \"body_mass_index\": (19.4, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "46.608",
         "metadata": {
@@ -8627,7 +8627,7 @@
     {
         "usr_msg": "Patient has a height of 197 cm and their target BMI is 22.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (197, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (197, 'cm'),  # height\n    \"body_mass_index\": (22.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "87.32",
         "metadata": {
@@ -8638,7 +8638,7 @@
     {
         "usr_msg": "Patient has a height of 76 in and their target BMI is 23.9 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (76, 'in'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (76, 'in'),  # height\n    \"body_mass_index\": (23.9, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "89.025",
         "metadata": {
@@ -8726,7 +8726,7 @@
     {
         "usr_msg": "Patient has a height of 185 cm and their target BMI is 18.8 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (185, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (185, 'cm'),  # height\n    \"body_mass_index\": (18.8, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "64.343",
         "metadata": {
@@ -8737,7 +8737,7 @@
     {
         "usr_msg": "Patient has a height of 57 in and their target BMI is 23.3 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (57, 'in'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (57, 'in'),  # height\n    \"body_mass_index\": (23.3, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "48.853",
         "metadata": {
@@ -8748,7 +8748,7 @@
     {
         "usr_msg": "Patient has a height of 1.51 m and their target BMI is 18.1 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (151, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (151, 'cm'),  # height\n    \"body_mass_index\": (18.1, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "41.27",
         "metadata": {
@@ -8759,7 +8759,7 @@
     {
         "usr_msg": "Patient has a height of 198 cm and their target BMI is 19.4 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (198, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (198, 'cm'),  # height\n    \"body_mass_index\": (19.4, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "76.056",
         "metadata": {
@@ -8770,7 +8770,7 @@
     {
         "usr_msg": "Patient has a height of 1.82 m and their target BMI is 20.6 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (182, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (182, 'cm'),  # height\n    \"body_mass_index\": (20.6, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "68.235",
         "metadata": {
@@ -8781,7 +8781,7 @@
     {
         "usr_msg": "Patient has a height of 1.53 m and their target BMI is 18.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (153, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (153, 'cm'),  # height\n    \"body_mass_index\": (18.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "43.307",
         "metadata": {
@@ -8792,7 +8792,7 @@
     {
         "usr_msg": "Patient has a height of 66 in and their target BMI is 18.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (66, 'in'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (66, 'in'),  # height\n    \"body_mass_index\": (18.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "51.966",
         "metadata": {
@@ -8803,7 +8803,7 @@
     {
         "usr_msg": "Patient has a height of 181 cm and their target BMI is 22.3 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (181, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (181, 'cm'),  # height\n    \"body_mass_index\": (22.3, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "73.057",
         "metadata": {
@@ -8814,7 +8814,7 @@
     {
         "usr_msg": "Patient has a height of 1.56 m and their target BMI is 20.6 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (156, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (156, 'cm'),  # height\n    \"body_mass_index\": (20.6, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "50.132",
         "metadata": {
@@ -8825,7 +8825,7 @@
     {
         "usr_msg": "Patient has a height of 59 in and their target BMI is 22.9 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (59, 'in'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (59, 'in'),  # height\n    \"body_mass_index\": (22.9, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "51.456",
         "metadata": {
@@ -8836,7 +8836,7 @@
     {
         "usr_msg": "Patient has a height of 1.54 m and their target BMI is 22.1 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (154, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (154, 'cm'),  # height\n    \"body_mass_index\": (22.1, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "52.412",
         "metadata": {
@@ -8847,7 +8847,7 @@
     {
         "usr_msg": "Patient has a height of 1.67 m and their target BMI is 24.8 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (167, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (167, 'cm'),  # height\n    \"body_mass_index\": (24.8, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "69.165",
         "metadata": {
@@ -8858,7 +8858,7 @@
     {
         "usr_msg": "Patient has a height of 1.63 m and their target BMI is 22.4 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (163, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (163, 'cm'),  # height\n    \"body_mass_index\": (22.4, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "59.515",
         "metadata": {
@@ -8869,7 +8869,7 @@
     {
         "usr_msg": "Patient has a height of 1.94 m and their target BMI is 20.6 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (194, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (194, 'cm'),  # height\n    \"body_mass_index\": (20.6, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "77.53",
         "metadata": {
@@ -8880,7 +8880,7 @@
     {
         "usr_msg": "Patient has a height of 1.77 m and their target BMI is 19.9 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (177, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (177, 'cm'),  # height\n    \"body_mass_index\": (19.9, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "62.345",
         "metadata": {
@@ -8891,7 +8891,7 @@
     {
         "usr_msg": "Patient has a height of 1.77 m and their target BMI is 23.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (177, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (177, 'cm'),  # height\n    \"body_mass_index\": (23.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "73.623",
         "metadata": {
@@ -8902,7 +8902,7 @@
     {
         "usr_msg": "Patient has a height of 1.96 m and their target BMI is 23.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (196, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (196, 'cm'),  # height\n    \"body_mass_index\": (23.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "90.278",
         "metadata": {
@@ -8913,7 +8913,7 @@
     {
         "usr_msg": "Patient has a height of 1.74 m and their target BMI is 19.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (174, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (174, 'cm'),  # height\n    \"body_mass_index\": (19.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "59.038",
         "metadata": {
@@ -8924,7 +8924,7 @@
     {
         "usr_msg": "Patient has a height of 1.73 m and their target BMI is 23.3 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (173, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (173, 'cm'),  # height\n    \"body_mass_index\": (23.3, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "69.735",
         "metadata": {
@@ -8935,7 +8935,7 @@
     {
         "usr_msg": "Patient has a height of 151 cm and their target BMI is 23.7 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (151, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (151, 'cm'),  # height\n    \"body_mass_index\": (23.7, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "54.038",
         "metadata": {
@@ -9078,7 +9078,7 @@
     {
         "usr_msg": "Patient has a height of 166 cm and their target BMI is 18.5 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (166, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (166, 'cm'),  # height\n    \"body_mass_index\": (18.5, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "50.979",
         "metadata": {
@@ -9089,7 +9089,7 @@
     {
         "usr_msg": "Patient has a height of 59 in and their target BMI is 18.8 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (59, 'in'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (59, 'in'),  # height\n    \"body_mass_index\": (18.8, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "42.244",
         "metadata": {
@@ -9144,7 +9144,7 @@
     {
         "usr_msg": "Patient has a height of 1.93 m and their target BMI is 20.0 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?",
         "rationale": [
-            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (193, 'cm'),  # height\n    \"body_mass_index\": (22.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# target_weight function call:\nfrom camel.toolkits.medcalc_bench.target_weight import targetweight_explanation\n\n# reall for parms\ninput_variables = {\n    \"height\": (193, 'cm'),  # height\n    \"body_mass_index\": (20.0, 'kg/m^2'),  # body_mass_index\n}\n\n# call function\nresult = targetweight_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "74.498",
         "metadata": {
@@ -11190,7 +11190,7 @@
     {
         "usr_msg": "Patient has taken 228.664 mg of Cortisone PO.  Based on the patient's dose of Cortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Cortisone PO', 228.664, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "36.586",
         "metadata": {
@@ -11201,7 +11201,7 @@
     {
         "usr_msg": "Patient has taken 8.58 mg of Dexamethasone PO.  Based on the patient's dose of Dexamethasone PO, what is the equivalent dosage in mg of Dexamethasone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Dexamethasone PO', 8.58, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "8.58",
         "metadata": {
@@ -11245,7 +11245,7 @@
     {
         "usr_msg": "Patient has taken 187.736 mg of Hydrocortisone IV.  Based on the patient's dose of Hydrocortisone IV, what is the equivalent dosage in mg of Betamethasone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone IV', 187.736, 'mg'],  # input steroid\n    \"target steroid\": 'Betamethasone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "6.946",
         "metadata": {
@@ -11256,7 +11256,7 @@
     {
         "usr_msg": "Patient has taken 107.735 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of PrednisoLONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 107.735, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "26.934",
         "metadata": {
@@ -11289,7 +11289,7 @@
     {
         "usr_msg": "Patient has taken 5.05 mg of Dexamethasone PO.  Based on the patient's dose of Dexamethasone PO, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Dexamethasone PO', 5.05, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "26.916",
         "metadata": {
@@ -11322,7 +11322,7 @@
     {
         "usr_msg": "Patient has taken 23.465 mg of Triamcinolone IV.  Based on the patient's dose of Triamcinolone IV, what is the equivalent dosage in mg of Betamethasone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Triamcinolone IV', 23.465, 'mg'],  # input steroid\n    \"target steroid\": 'Betamethasone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "4.411",
         "metadata": {
@@ -11344,7 +11344,7 @@
     {
         "usr_msg": "Patient has taken 190.936 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 190.936, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "38.187",
         "metadata": {
@@ -11366,7 +11366,7 @@
     {
         "usr_msg": "Patient has taken 128.268 mg of Hydrocortisone IV.  Based on the patient's dose of Hydrocortisone IV, what is the equivalent dosage in mg of Cortisone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone IV', 128.268, 'mg'],  # input steroid\n    \"target steroid\": 'Cortisone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "160.335",
         "metadata": {
@@ -11377,7 +11377,7 @@
     {
         "usr_msg": "Patient has taken 45.437 mg of MethylPrednisoLONE IV.  Based on the patient's dose of MethylPrednisoLONE IV, what is the equivalent dosage in mg of Hydrocortisone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['MethylPrednisoLONE IV', 45.437, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "227.367",
         "metadata": {
@@ -11388,7 +11388,7 @@
     {
         "usr_msg": "Patient has taken 123.468 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of Dexamethasone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 123.468, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "4.568",
         "metadata": {
@@ -11399,7 +11399,7 @@
     {
         "usr_msg": "Patient has taken 14.132 mg of MethylPrednisoLONE IV.  Based on the patient's dose of MethylPrednisoLONE IV, what is the equivalent dosage in mg of Dexamethasone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['MethylPrednisoLONE IV', 14.132, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "2.657",
         "metadata": {
@@ -11410,7 +11410,7 @@
     {
         "usr_msg": "Patient has taken 8.35 mg of Dexamethasone IV.  Based on the patient's dose of Dexamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Dexamethasone IV', 8.35, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "222.695",
         "metadata": {
@@ -11421,7 +11421,7 @@
     {
         "usr_msg": "Patient has taken 44.802 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of Dexamethasone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PrednisoLONE PO', 44.802, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "6.72",
         "metadata": {
@@ -11432,7 +11432,7 @@
     {
         "usr_msg": "Patient has taken 44.136 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of Betamethasone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PrednisoLONE PO', 44.136, 'mg'],  # input steroid\n    \"target steroid\": 'Betamethasone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "6.62",
         "metadata": {
@@ -11443,7 +11443,7 @@
     {
         "usr_msg": "Patient has taken 82.333 mg of Cortisone PO.  Based on the patient's dose of Cortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Cortisone PO', 82.333, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "13.173",
         "metadata": {
@@ -11454,7 +11454,7 @@
     {
         "usr_msg": "Patient has taken 29.401 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of Hydrocortisone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PrednisoLONE PO', 29.401, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "117.575",
         "metadata": {
@@ -11465,7 +11465,7 @@
     {
         "usr_msg": "Patient has taken 8.84 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Betamethasone IV', 8.84, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "47.117",
         "metadata": {
@@ -11476,7 +11476,7 @@
     {
         "usr_msg": "Patient has taken 13.067 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PrednisoLONE PO', 13.067, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "10.441",
         "metadata": {
@@ -11487,7 +11487,7 @@
     {
         "usr_msg": "Patient has taken 1.2 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Betamethasone IV', 1.2, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "32.004",
         "metadata": {
@@ -11498,7 +11498,7 @@
     {
         "usr_msg": "Patient has taken 16.426 mg of MethylPrednisoLONE PO.  Based on the patient's dose of MethylPrednisoLONE PO, what is the equivalent dosage in mg of Dexamethasone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['MethylPrednisoLONE PO', 16.426, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "3.088",
         "metadata": {
@@ -11509,7 +11509,7 @@
     {
         "usr_msg": "Patient has taken 13.534 mg of PredniSONE PO.  Based on the patient's dose of PredniSONE PO, what is the equivalent dosage in mg of Dexamethasone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PredniSONE PO', 13.534, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "2.03",
         "metadata": {
@@ -11520,7 +11520,7 @@
     {
         "usr_msg": "Patient has taken 5.77 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Betamethasone IV', 5.77, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "153.886",
         "metadata": {
@@ -11531,7 +11531,7 @@
     {
         "usr_msg": "Patient has taken 97.335 mg of Hydrocortisone PO.  Based on the patient's dose of Hydrocortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 97.335, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "19.467",
         "metadata": {
@@ -11542,7 +11542,7 @@
     {
         "usr_msg": "Patient has taken 1.35 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of MethylPrednisoLONE IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Betamethasone IV', 1.35, 'mg'],  # input steroid\n    \"target steroid\": 'MethylPrednisoLONE IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "7.196",
         "metadata": {
@@ -11553,7 +11553,7 @@
     {
         "usr_msg": "Patient has taken 38.002 mg of PredniSONE PO.  Based on the patient's dose of PredniSONE PO, what is the equivalent dosage in mg of Hydrocortisone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PredniSONE PO', 38.002, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "151.97",
         "metadata": {
@@ -11564,7 +11564,7 @@
     {
         "usr_msg": "Patient has taken 5.11 mg of Betamethasone IV.  Based on the patient's dose of Betamethasone IV, what is the equivalent dosage in mg of PrednisoLONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Betamethasone IV', 5.11, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "34.084",
         "metadata": {
@@ -11575,7 +11575,7 @@
     {
         "usr_msg": "Patient has taken 19.199 mg of Triamcinolone IV.  Based on the patient's dose of Triamcinolone IV, what is the equivalent dosage in mg of PredniSONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Triamcinolone IV', 19.199, 'mg'],  # input steroid\n    \"target steroid\": 'PredniSONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "24.018",
         "metadata": {
@@ -11586,7 +11586,7 @@
     {
         "usr_msg": "Patient has taken 25.735 mg of PrednisoLONE PO.  Based on the patient's dose of PrednisoLONE PO, what is the equivalent dosage in mg of PredniSONE PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['PrednisoLONE PO', 25.735, 'mg'],  # input steroid\n    \"target steroid\": 'PredniSONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "25.735",
         "metadata": {
@@ -11597,7 +11597,7 @@
     {
         "usr_msg": "Patient has taken 13.599 mg of MethylPrednisoLONE IV.  Based on the patient's dose of MethylPrednisoLONE IV, what is the equivalent dosage in mg of Dexamethasone PO? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['MethylPrednisoLONE IV', 13.599, 'mg'],  # input steroid\n    \"target steroid\": 'Dexamethasone PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "2.557",
         "metadata": {
@@ -11641,7 +11641,7 @@
     {
         "usr_msg": "Patient has taken 5.25 mg of Dexamethasone IV.  Based on the patient's dose of Dexamethasone IV, what is the equivalent dosage in mg of Hydrocortisone IV? ",
         "rationale": [
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Dexamethasone IV', 5.25, 'mg'],  # input steroid\n    \"target steroid\": 'Hydrocortisone IV',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "140.018",
         "metadata": {
@@ -11947,8 +11947,8 @@
         "usr_msg": "The patient takes 20 mg of Methadone 2 times a day, 10 mg of Tapentadol 2 times a day, and 30 mg of OxyMORphone 2 times a day. Based on the number of doses per day and the quantity of different doses, what is the patient's daily Morphine Miligram Equivalents (MME)?",
         "rationale": [
             "# mme function call:\nfrom camel.toolkits.medcalc_bench.mme import mme_explanation\n\n# reall for parms\ninput_variables = {\n\n}\n\n# call function\nresult = mme_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Methadone PO', 20, 'mg'],  # input steroid\n    \"target steroid\": 'Morphine PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['OxyMORphone PO', 30, 'mg'],  # input steroid\n    \"target steroid\": 'Morphine PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "376.0",
         "metadata": {
@@ -11998,8 +11998,8 @@
         "rationale": [
             "# mme function call:\nfrom camel.toolkits.medcalc_bench.mme import mme_explanation\n\n# reall for parms\ninput_variables = {\n\n}\n\n# call function\nresult = mme_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
             "# mme function call:\nfrom camel.toolkits.medcalc_bench.mme import mme_explanation\n\n# reall for parms\ninput_variables = {\n\n}\n\n# call function\nresult = mme_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
-            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Hydrocortisone PO', 100.0, 'mg'],  # input steroid\n    \"target steroid\": 'PrednisoLONE PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['OxyMORphone PO', 50, 'mg'],  # input steroid\n    \"target steroid\": 'Morphine PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n",
+            "# steroid_conversion function call:\nfrom camel.toolkits.medcalc_bench.steroid_conversion import compute_steroid_conversion_explanation\n\n# reall for parms\ninput_variables = {\n    \"input steroid\": ['Methadone PO', 40, 'mg'],  # input steroid\n    \"target steroid\": 'Morphine PO',  # target steroid\n}\n\n# call function\nresult = compute_steroid_conversion_explanation(input_variables)\n\n# return result\nprint(result)\n\n"
         ],
         "final_answer": "936.0",
         "metadata": {
