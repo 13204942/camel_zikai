@@ -1,0 +1,824 @@
+{
+  "summary": {
+    "total_discrepancies": 290,
+    "calculations_with_issues": 29
+  },
+  "details_by_calculation": {
+    "Creatinine Clearance (Cockcroft-Gault Equation)": {
+      "count": 19,
+      "average_difference": 13.25468421052632,
+      "max_difference": 77.477,
+      "min_difference": 0.9830000000000005,
+      "examples": [
+        {
+          "index": 0,
+          "calc_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "tool_answer": 44.363,
+          "final_answer": "51.212",
+          "difference": 6.849000000000004,
+          "question": "A 51-year-old lady presented to our emergency department because of generalized body ache and marked weakness in both lower extremities for two days duration. She had no history of vomiting, diarrhea,..."
+        },
+        {
+          "index": 4,
+          "calc_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "tool_answer": 63.952,
+          "final_answer": "70.556",
+          "difference": 6.603999999999999,
+          "question": "A 65-year-old female consulted our office for naturopathic primary-care support for a myriad of conditions, which included diabetes with weight gain, chronic fatigue, depression with emotional labilit..."
+        },
+        {
+          "index": 5,
+          "calc_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "tool_answer": 173.72,
+          "final_answer": "171.857",
+          "difference": 1.8629999999999995,
+          "question": "An 11-year-old girl was admitted to our hospital with microscopic hematuria and nephrotic-range proteinuria detected by school urinary screening. The patient did not have any characteristic features o..."
+        }
+      ]
+    },
+    "CKD-EPI Equations for Glomerular Filtration Rate": {
+      "count": 6,
+      "average_difference": 8.0725,
+      "max_difference": 28.697000000000003,
+      "min_difference": 0.027000000000001023,
+      "examples": [
+        {
+          "index": 34,
+          "calc_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+          "tool_answer": 7.451,
+          "final_answer": "7.51",
+          "difference": 0.05900000000000016,
+          "question": "A 61-year-old Caucasian man presented to the emergency department in autumn with one week of dyspnea, productive cough, myalgia, and fever. He denied any chest pain or hemoptysis. His past medical his..."
+        },
+        {
+          "index": 36,
+          "calc_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+          "tool_answer": 32.255,
+          "final_answer": "3.558",
+          "difference": 28.697000000000003,
+          "question": "A 58-year-old Thai female patient with hypertension, hyperlipidemia, and type 2 diabetes mellitus was infected with HIV 1.5 years ago. She had been taking antiretroviral drugs including tenofovir, emt..."
+        },
+        {
+          "index": 46,
+          "calc_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+          "tool_answer": 30.804,
+          "final_answer": "42.358",
+          "difference": 11.553999999999998,
+          "question": "A 16-year-old boy presented with history of vomiting and headache of 15 days duration. On evaluation, he was found to have blood pressure of 160/80 mmHg. He had a history of consumption of anabolic st..."
+        }
+      ]
+    },
+    "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+      "count": 12,
+      "average_difference": 1.1666666666666667,
+      "max_difference": 2.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 59,
+          "calc_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "tool_answer": 3,
+          "final_answer": "4",
+          "difference": 1.0,
+          "question": "A 74-year-old male with a past medical history of coronary artery disease, congestive cardiac failure, permanent atrial fibrillation status-post nodal ablation, and placement of a biventricular pacema..."
+        },
+        {
+          "index": 60,
+          "calc_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "tool_answer": 3,
+          "final_answer": "5",
+          "difference": 2.0,
+          "question": "A 35-year-old woman with the following characteristics was posted for emergency caesarean delivery in view of intra-uterine growth retardation and foetal tachycardia: Second gravida at 35 weeks of ges..."
+        },
+        {
+          "index": 61,
+          "calc_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "tool_answer": 4,
+          "final_answer": "5",
+          "difference": 1.0,
+          "question": "A 73-year-old man was referred to the Emergency Department of our University Hospital because of fever, dry cough, and worsening dyspnea after contacts with two sons recently diagnosed with COVID-19. ..."
+        }
+      ]
+    },
+    "Wells' Criteria for Pulmonary Embolism": {
+      "count": 11,
+      "average_difference": 2.272727272727273,
+      "max_difference": 6.0,
+      "min_difference": 0.5,
+      "examples": [
+        {
+          "index": 177,
+          "calc_name": "Wells' Criteria for Pulmonary Embolism",
+          "tool_answer": 8.5,
+          "final_answer": "7.0",
+          "difference": 1.5,
+          "question": "A 79-year-old woman with stage IV colon cancer, metastatic to the lungs and the adrenal glands, presented to the emergency department with dry cough and worsening dyspnea on exertion of 1-day duration..."
+        },
+        {
+          "index": 178,
+          "calc_name": "Wells' Criteria for Pulmonary Embolism",
+          "tool_answer": 1,
+          "final_answer": "5",
+          "difference": 4.0,
+          "question": "A 66-year-old white female with a 50 pack-year smoking history presented to our tertiary hospital with acute massive haemoptysis. She had recently moved interstate, with no patient data available in o..."
+        },
+        {
+          "index": 179,
+          "calc_name": "Wells' Criteria for Pulmonary Embolism",
+          "tool_answer": 4.5,
+          "final_answer": "5.5",
+          "difference": 1.0,
+          "question": "We present the case of a 62-year-old gentleman, who was brought into the emergency department (ED) by ambulance with a history of dry cough, low grade fever, worsening shortness of breath for 4 days, ..."
+        }
+      ]
+    },
+    "MDRD GFR Equation": {
+      "count": 5,
+      "average_difference": 3.364200000000001,
+      "max_difference": 11.408000000000001,
+      "min_difference": 0.1739999999999995,
+      "examples": [
+        {
+          "index": 190,
+          "calc_name": "MDRD GFR Equation",
+          "tool_answer": 15.021,
+          "final_answer": "3.613",
+          "difference": 11.408000000000001,
+          "question": "A 24-year-old man was admitted to our hospital with the signs of advanced chronic renal failure (CRF) in 2006. In his past history, he had developed kidney and bladder stones since he was 5-year-old. ..."
+        },
+        {
+          "index": 206,
+          "calc_name": "MDRD GFR Equation",
+          "tool_answer": 9.345,
+          "final_answer": "9.519",
+          "difference": 0.1739999999999995,
+          "question": "A 53-year-old white male was admitted for acute kidney injury and hyperkalemia 21 months after liver transplantation for hepatitis C. He had a past medical history of human immunodeficiency virus (HIV..."
+        },
+        {
+          "index": 209,
+          "calc_name": "MDRD GFR Equation",
+          "tool_answer": 7.663,
+          "final_answer": "8.381",
+          "difference": 0.718,
+          "question": "A 62-year-old woman with a history of stage IIIa chronic kidney disease (CKD) was referred to our hospital for rapidly worsening renal function with hyperkalemia and metabolic acidosis. Her baseline c..."
+        }
+      ]
+    },
+    "HEART Score for Major Cardiac Events": {
+      "count": 13,
+      "average_difference": 1.8461538461538463,
+      "max_difference": 4.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 282,
+          "calc_name": "HEART Score for Major Cardiac Events",
+          "tool_answer": 1,
+          "final_answer": "3",
+          "difference": 2.0,
+          "question": "A 50-year-old Hispanic male presented with moderate chest pain and discomfort that began the night prior to admission. On presentation, the patient was noted to have a fever of 39.5°C and found to be ..."
+        },
+        {
+          "index": 283,
+          "calc_name": "HEART Score for Major Cardiac Events",
+          "tool_answer": 7,
+          "final_answer": "5",
+          "difference": 2.0,
+          "question": "A 33-year-old man, without known co-morbidities, was brought into the emergency department with sudden onset of headache and severe central chest pain, radiating to the back. The patient arrived 3.5 h..."
+        },
+        {
+          "index": 285,
+          "calc_name": "HEART Score for Major Cardiac Events",
+          "tool_answer": 9,
+          "final_answer": "7",
+          "difference": 2.0,
+          "question": "An eighty-one-year-old woman without significant cardiovascular risk factors presented to the emergency department with chief compliant of acute onset of severe pressure-like, left-sided chest pain as..."
+        }
+      ]
+    },
+    "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+      "count": 4,
+      "average_difference": 9.372499999999999,
+      "max_difference": 16.259999999999998,
+      "min_difference": 2.826,
+      "examples": [
+        {
+          "index": 312,
+          "calc_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "tool_answer": 9.947,
+          "final_answer": "6.893",
+          "difference": 3.0539999999999994,
+          "question": "A 43-year-old female with a past medical history of insulin-dependent diabetes mellitus, hypertension, and hyperlipidemia presented to the hospital with progressive shortness of breath, polyuria, dysu..."
+        },
+        {
+          "index": 319,
+          "calc_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "tool_answer": 29.029,
+          "final_answer": "12.769",
+          "difference": 16.259999999999998,
+          "question": "A 64-year-old white male retired military intelligence officer had a 6-year history of cirrhosis associated with hepatitis B virus (HBV) infection when he was admitted to a referral hospital for liver..."
+        },
+        {
+          "index": 320,
+          "calc_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "tool_answer": 1.121,
+          "final_answer": "3.947",
+          "difference": 2.826,
+          "question": "A 30-year-old female with acute hepatitis was referred to our hospital in 1995. She had been asymptomatic until the disease onset. She had no history of significant medical condition, blood transfusio..."
+        }
+      ]
+    },
+    "Centor Score (Modified/McIsaac) for Strep Pharyngitis": {
+      "count": 21,
+      "average_difference": 1.5238095238095237,
+      "max_difference": 3.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 336,
+          "calc_name": "Centor Score (Modified/McIsaac) for Strep Pharyngitis",
+          "tool_answer": 1,
+          "final_answer": "2",
+          "difference": 1.0,
+          "question": "A 16-year-old male presents to his pediatrician with a sore throat. He reports a severely painful throat preceded by several days of malaise and fatigue. He has a history of seasonal allergies and ast..."
+        },
+        {
+          "index": 338,
+          "calc_name": "Centor Score (Modified/McIsaac) for Strep Pharyngitis",
+          "tool_answer": 1,
+          "final_answer": "3",
+          "difference": 2.0,
+          "question": "A 15-year-old girl presents to her primary care physician with her parents. She is complaining of fever and a sore throat for the past 4 days. She was born at 39 weeks gestation via spontaneous vagina..."
+        },
+        {
+          "index": 342,
+          "calc_name": "Centor Score (Modified/McIsaac) for Strep Pharyngitis",
+          "tool_answer": 1,
+          "final_answer": "3",
+          "difference": 2.0,
+          "question": "An 18-year-old female with a history of RT presented with a two-day history of bilateral tonsillar swelling, with accompanying sore throat, difficulty swallowing, pharyngeal exudates, and a hot potato..."
+        }
+      ]
+    },
+    "Maintenance Fluids Calculations": {
+      "count": 1,
+      "average_difference": 49.6,
+      "max_difference": 49.6,
+      "min_difference": 49.6,
+      "examples": [
+        {
+          "index": 380,
+          "calc_name": "Maintenance Fluids Calculations",
+          "tool_answer": 62,
+          "final_answer": "12.4",
+          "difference": 49.6,
+          "question": "The patient is a six-year-old male, the third child in the family with a positive history of a first-degree consanguinity. The other two siblings are completely healthy and there is no family history ..."
+        }
+      ]
+    },
+    "Sodium Correction for Hyperglycemia": {
+      "count": 1,
+      "average_difference": 3.9039999999999964,
+      "max_difference": 3.9039999999999964,
+      "min_difference": 3.9039999999999964,
+      "examples": [
+        {
+          "index": 420,
+          "calc_name": "Sodium Correction for Hyperglycemia",
+          "tool_answer": 122.936,
+          "final_answer": "126.84",
+          "difference": 3.9039999999999964,
+          "question": "A 67-year-old male with a history of nonischemic cardiomyopathy, non-insulin–dependent diabetes mellitus, and hypertension presented with progressively worsening dyspnea and cough of three weeks durat..."
+        }
+      ]
+    },
+    "Serum Osmolality": {
+      "count": 2,
+      "average_difference": 1704.655,
+      "max_difference": 3385.5,
+      "min_difference": 23.810000000000002,
+      "examples": [
+        {
+          "index": 436,
+          "calc_name": "Serum Osmolality",
+          "tool_answer": 269.087,
+          "final_answer": "292.897",
+          "difference": 23.810000000000002,
+          "question": "A 76-year-old man with a past medical history of prostate cancer, paroxysmal atrial fibrillation, and recurring pneumonia was found to have a 10-mm nodule in the left lower lung without hilar or media..."
+        },
+        {
+          "index": 440,
+          "calc_name": "Serum Osmolality",
+          "tool_answer": 298.075,
+          "final_answer": "3683.575",
+          "difference": 3385.5,
+          "question": "We present the case of a 52-year-old Mexican man who worked as an office employee and lived in a suburban area of the city of Colima, Mexico. He and his wife denied recent trips outside the city. Zoon..."
+        }
+      ]
+    },
+    "FeverPAIN Score for Strep Pharyngitis": {
+      "count": 14,
+      "average_difference": 1.7142857142857142,
+      "max_difference": 4.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 449,
+          "calc_name": "FeverPAIN Score for Strep Pharyngitis",
+          "tool_answer": 4,
+          "final_answer": "0",
+          "difference": 4.0,
+          "question": "A 4-year-old boy is brought to the physician because of a 5-day history of sore throat and a painful swelling on the left side of his neck that has become progressively larger. He has had pain during ..."
+        },
+        {
+          "index": 450,
+          "calc_name": "FeverPAIN Score for Strep Pharyngitis",
+          "tool_answer": 3,
+          "final_answer": "2",
+          "difference": 1.0,
+          "question": "Three-month-old female infant, admitted for social reasons. Fourth daughter of\nnon-consanguineous parents; mother with cognitive deficit. Born of 36-week pregnancy\ncomplicated by gestational diabetes ..."
+        },
+        {
+          "index": 451,
+          "calc_name": "FeverPAIN Score for Strep Pharyngitis",
+          "tool_answer": 3,
+          "final_answer": "1",
+          "difference": 2.0,
+          "question": "A 28-year-old man presents to the office complaining of a sore throat, difficulty swallowing, and difficulty opening his mouth for the past 5 days. He states that he had symptoms like this before and ..."
+        }
+      ]
+    },
+    "HOMA-IR (Homeostatic Model Assessment for Insulin Resistance)": {
+      "count": 1,
+      "average_difference": 151.356,
+      "max_difference": 151.356,
+      "min_difference": 151.356,
+      "examples": [
+        {
+          "index": 455,
+          "calc_name": "HOMA-IR (Homeostatic Model Assessment for Insulin Resistance)",
+          "tool_answer": 30.271,
+          "final_answer": "181.627",
+          "difference": 151.356,
+          "question": "In the 1998 report on the treatment of B, he was 20 years old. B had been a child with a classical gender dysphoric development and fulfilled the current criteria for GnRH analog treatment eligibility..."
+        }
+      ]
+    },
+    "Free Water Deficit": {
+      "count": 5,
+      "average_difference": 55.5284,
+      "max_difference": 273.857,
+      "min_difference": 0.055999999999999994,
+      "examples": [
+        {
+          "index": 466,
+          "calc_name": "Free Water Deficit",
+          "tool_answer": -1.62,
+          "final_answer": "0.27",
+          "difference": 1.8900000000000001,
+          "question": "A 17-year-old Caucasian female presented to local hospital with a history of acute alcohol intoxication and ingestion of large quantities of acetaminophen. The patient complained of nausea for 2 days ..."
+        },
+        {
+          "index": 468,
+          "calc_name": "Free Water Deficit",
+          "tool_answer": 0.429,
+          "final_answer": "274.286",
+          "difference": 273.857,
+          "question": "A 16-year-old boy with KFS presented to our hospital's oral and maxillofacial surgery department with complaints of an inability to bite and chew food, lisping speech, and chronic jaw pain. He was bor..."
+        },
+        {
+          "index": 478,
+          "calc_name": "Free Water Deficit",
+          "tool_answer": 0.086,
+          "final_answer": "0.03",
+          "difference": 0.055999999999999994,
+          "question": "The patient is a 6-year-old boy who is referred to our hospital with complaints of fever, malaise, anorexia, nausea, and vomiting from 4 weeks ago. During this period, the patient had lost 7 kg and hi..."
+        }
+      ]
+    },
+    "Anion Gap": {
+      "count": 7,
+      "average_difference": 487.42857142857144,
+      "max_difference": 2000.0,
+      "min_difference": 2.0,
+      "examples": [
+        {
+          "index": 501,
+          "calc_name": "Anion Gap",
+          "tool_answer": 19.0,
+          "final_answer": "25.0",
+          "difference": 6.0,
+          "question": "A previously healthy 23-month-old boy presented to our hospital with a 2-day history of fever, postprandial diffuse abdominal pain, and non-bilious vomiting (>5 episodes/day) that began 1 day before a..."
+        },
+        {
+          "index": 508,
+          "calc_name": "Anion Gap",
+          "tool_answer": 6,
+          "final_answer": "1230.0",
+          "difference": 1224.0,
+          "question": "A 59-year-old male with a 30-year history of neurofibromatosis presented with shortness of breath and ataxia for the last 10 days. Other past medical history includes tobacco abuse with 30 pack-year h..."
+        },
+        {
+          "index": 509,
+          "calc_name": "Anion Gap",
+          "tool_answer": 10,
+          "final_answer": "100.0",
+          "difference": 90.0,
+          "question": "A 67-year-old man with past medical history of coronary artery disease (CAD) status post coronary artery bypass graft (CABG), history of alcoholism, and history of chronic kidney disease stage 3 prese..."
+        }
+      ]
+    },
+    "LDL Calculated": {
+      "count": 19,
+      "average_difference": 76.44421052631579,
+      "max_difference": 241.0,
+      "min_difference": 12.999999999999986,
+      "examples": [
+        {
+          "index": 526,
+          "calc_name": "LDL Calculated",
+          "tool_answer": 142.0,
+          "final_answer": "103.0",
+          "difference": 39.0,
+          "question": "A 45-year-old male was admitted to our hospital due to substernal chest discomfort on mild exertion, which occurred three weeks prior to presentation. The frequency and severity of his angina increase..."
+        },
+        {
+          "index": 527,
+          "calc_name": "LDL Calculated",
+          "tool_answer": 51.0,
+          "final_answer": "123.0",
+          "difference": 72.0,
+          "question": "A 28-year-old obese man presented at the Emergency Room of our hospital complaining of epigastric pain radiated to the back for one day. He had been admitted to our hospital 3 times previously due to ..."
+        },
+        {
+          "index": 528,
+          "calc_name": "LDL Calculated",
+          "tool_answer": 143.54,
+          "final_answer": "59.54",
+          "difference": 84.0,
+          "question": "A 22-year-old male patient with a past medical history of nephrotic syndrome due to membranous nephropathy, which was diagnosed by renal biopsy 1 year ago, was admitted to the emergency room and trans..."
+        }
+      ]
+    },
+    "CURB-65 Score for Pneumonia Severity": {
+      "count": 1,
+      "average_difference": 1.0,
+      "max_difference": 1.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 571,
+          "calc_name": "CURB-65 Score for Pneumonia Severity",
+          "tool_answer": 2,
+          "final_answer": "3",
+          "difference": 1.0,
+          "question": "The patient was a 73-year-old man. He received docetaxel and prednisolone chemotherapy for prostate cancer and was administered pegfilgrastim after chemotherapy. His medication history included oral a..."
+        }
+      ]
+    },
+    "PERC Rule for Pulmonary Embolism": {
+      "count": 7,
+      "average_difference": 1.1428571428571428,
+      "max_difference": 2.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 573,
+          "calc_name": "PERC Rule for Pulmonary Embolism",
+          "tool_answer": 2,
+          "final_answer": "3",
+          "difference": 1.0,
+          "question": "A 73-year-old female was brought by emergency medical services (EMS) to the emergency department (ED) after a motor vehicle collision (MVC). She was driving when her car crashed into a streetlamp at 4..."
+        },
+        {
+          "index": 576,
+          "calc_name": "PERC Rule for Pulmonary Embolism",
+          "tool_answer": 1,
+          "final_answer": "2",
+          "difference": 1.0,
+          "question": "A 40-year-old previously healthy man with a past medical history only notable for a body mass index of 27 presented to the Emergency Department (ED) with several days of fever and cough. He tested pos..."
+        },
+        {
+          "index": 578,
+          "calc_name": "PERC Rule for Pulmonary Embolism",
+          "tool_answer": 1,
+          "final_answer": "2",
+          "difference": 1.0,
+          "question": "A 17-year-old female presented with 1-month history of more noticeable weight loss and increased tiredness. Over the last 6 years since immigrating to the United States with her family from Burma and ..."
+        }
+      ]
+    },
+    "SIRS Criteria": {
+      "count": 1,
+      "average_difference": 1.0,
+      "max_difference": 1.0,
+      "min_difference": 1.0,
+      "examples": [
+        {
+          "index": 611,
+          "calc_name": "SIRS Criteria",
+          "tool_answer": 4,
+          "final_answer": "3",
+          "difference": 1.0,
+          "question": "A 32-year-old female with a past medical history of obesity (body mass index of 42) and gastroesophageal reflux disease, not on home medications, presented to the emergency department complaining of w..."
+        }
+      ]
+    },
+    "Target weight": {
+      "count": 29,
+      "average_difference": 5.819482758620692,
+      "max_difference": 10.951999999999998,
+      "min_difference": 0.23700000000000188,
+      "examples": [
+        {
+          "index": 765,
+          "calc_name": "Target weight",
+          "tool_answer": 80.258,
+          "final_answer": "89.014",
+          "difference": 8.756,
+          "question": "Patient has a height of 1.91 m and their target BMI is 24.4 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?..."
+        },
+        {
+          "index": 767,
+          "calc_name": "Target weight",
+          "tool_answer": 73.595,
+          "final_answer": "67.239",
+          "difference": 6.3559999999999945,
+          "question": "Patient has a height of 72 in and their target BMI is 20.1 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?..."
+        },
+        {
+          "index": 770,
+          "calc_name": "Target weight",
+          "tool_answer": 67.375,
+          "final_answer": "61.862",
+          "difference": 5.512999999999998,
+          "question": "Patient has a height of 175 cm and their target BMI is 20.2 kg/m^2. Based on the patient's height and target BMI, what is the patient's target weight in kg?..."
+        }
+      ]
+    },
+    "Body Surface Area Calculator": {
+      "count": 1,
+      "average_difference": 0.1419999999999999,
+      "max_difference": 0.1419999999999999,
+      "min_difference": 0.1419999999999999,
+      "examples": [
+        {
+          "index": 768,
+          "calc_name": "Body Surface Area Calculator",
+          "tool_answer": 1.618,
+          "final_answer": "1.76",
+          "difference": 0.1419999999999999,
+          "question": "A 27-year-old single Saudi woman presented with her parents on September 2016 at the gynecology outpatient clinic of the King Fahad Medical city, Saudi Arabia, with a gradually abdominal distension an..."
+        }
+      ]
+    },
+    "Adjusted Body Weight": {
+      "count": 2,
+      "average_difference": 3981.2695,
+      "max_difference": 7960.539,
+      "min_difference": 2.0,
+      "examples": [
+        {
+          "index": 830,
+          "calc_name": "Adjusted Body Weight",
+          "tool_answer": 44.713,
+          "final_answer": "42.713",
+          "difference": 2.0,
+          "question": "A 50-year-old female presented to our hospital with generalized abdominal pain. The pain had been intermittent and was occurring spontaneously, every two to three weeks, for the last year. Her current..."
+        },
+        {
+          "index": 833,
+          "calc_name": "Adjusted Body Weight",
+          "tool_answer": 66.51,
+          "final_answer": "8027.049",
+          "difference": 7960.539,
+          "question": "In this article, we present the case of a 54-year-old woman suffering from severe obesity with a body mass index (BMI) of 47.5 kg / m2 (weight: 104 kg, height 148 m). In anamnesis, chronic bronchopath..."
+        }
+      ]
+    },
+    "Delta Gap": {
+      "count": 3,
+      "average_difference": 11.429666666666668,
+      "max_difference": 20.9,
+      "min_difference": 2.1,
+      "examples": [
+        {
+          "index": 842,
+          "calc_name": "Delta Gap",
+          "tool_answer": 3.0,
+          "final_answer": "0.9",
+          "difference": 2.1,
+          "question": "A 31-year-old male presented to the emergency room complaining of progressive dyspnea and productive cough over the course of 4 months. He also noted decreased appetite with a 50-pound weight loss ove..."
+        },
+        {
+          "index": 858,
+          "calc_name": "Delta Gap",
+          "tool_answer": 0,
+          "final_answer": "20.9",
+          "difference": 20.9,
+          "question": "A 70-year-old man comes to the physician because of a 2-month history of progressive shortness of breath and a dry cough. He has also noticed gradual development of facial discoloration. He has not ha..."
+        },
+        {
+          "index": 859,
+          "calc_name": "Delta Gap",
+          "tool_answer": 4.7,
+          "final_answer": "15.989",
+          "difference": 11.289000000000001,
+          "question": "A 72-year-old man suffered from a fever, diarrhea, pneumaturia, and fecaluria beginning in April 2013 and referred to our hospital in May 2013. He was hospitalized due to the symptom of abdominal dist..."
+        }
+      ]
+    },
+    "Delta Ratio": {
+      "count": 26,
+      "average_difference": 32.12926538461539,
+      "max_difference": 603.0,
+      "min_difference": 0.21889999999999998,
+      "examples": [
+        {
+          "index": 866,
+          "calc_name": "Delta Ratio",
+          "tool_answer": 18.0,
+          "final_answer": "0.947",
+          "difference": 17.053,
+          "question": "A 58-year-old male with dyslipidemia, an eight-year history of T2DM, a family history, his mother, of T2DM, with no known micro- or macrovascular complications, was admitted to the emergency departmen..."
+        },
+        {
+          "index": 868,
+          "calc_name": "Delta Ratio",
+          "tool_answer": 10.0,
+          "final_answer": "1.429",
+          "difference": 8.571,
+          "question": "A 27-year-old man presents to the emergency department. He was brought in by staff from the homeless shelter when they found him unresponsive. The patient is a known IV drug abuser but otherwise has a..."
+        },
+        {
+          "index": 870,
+          "calc_name": "Delta Ratio",
+          "tool_answer": 32.0,
+          "final_answer": "1.455",
+          "difference": 30.545,
+          "question": "A 14-year-old male presents to the emergency department with altered mental status. His friends who accompanied him said that he complained of abdominal pain while camping. They denied his consumption..."
+        }
+      ]
+    },
+    "Albumin Corrected Anion Gap": {
+      "count": 6,
+      "average_difference": 3349.2483333333334,
+      "max_difference": 19980.0,
+      "min_difference": 6.0,
+      "examples": [
+        {
+          "index": 891,
+          "calc_name": "Albumin Corrected Anion Gap",
+          "tool_answer": 26.99,
+          "final_answer": "17.5",
+          "difference": 9.489999999999998,
+          "question": "A 66-year-old man presents to your office for a regular checkup. His only current complaint is periodic difficulty falling asleep at night. He takes captopril and hydrochlorothiazide for hypertension,..."
+        },
+        {
+          "index": 906,
+          "calc_name": "Albumin Corrected Anion Gap",
+          "tool_answer": 17.85,
+          "final_answer": "30.85",
+          "difference": 13.0,
+          "question": "A 27-year-old man with no medical history presented with headache since the morning and increasing nausea and drowsiness during the day. He became progressively confused in the late afternoon after wh..."
+        },
+        {
+          "index": 907,
+          "calc_name": "Albumin Corrected Anion Gap",
+          "tool_answer": 22.5,
+          "final_answer": "28.5",
+          "difference": 6.0,
+          "question": "A previously healthy 23-month-old boy presented to our hospital with a 2-day history of fever, postprandial diffuse abdominal pain, and non-bilious vomiting (>5 episodes/day) that began 1 day before a..."
+        }
+      ]
+    },
+    "Albumin Corrected Delta Gap": {
+      "count": 3,
+      "average_difference": 6663.53,
+      "max_difference": 19980.0,
+      "min_difference": 1.1,
+      "examples": [
+        {
+          "index": 925,
+          "calc_name": "Albumin Corrected Delta Gap",
+          "tool_answer": 14.99,
+          "final_answer": "5.5",
+          "difference": 9.49,
+          "question": "A 66-year-old man presents to your office for a regular checkup. His only current complaint is periodic difficulty falling asleep at night. He takes captopril and hydrochlorothiazide for hypertension,..."
+        },
+        {
+          "index": 938,
+          "calc_name": "Albumin Corrected Delta Gap",
+          "tool_answer": 10.75,
+          "final_answer": "19990.75",
+          "difference": 19980.0,
+          "question": "A 66-year-old male was admitted to the ICU with complaints of chronic weakness, fatigue, myalgia, weight loss, and left flank pain. Comorbidities included hypertension, active smoking, and diabetes me..."
+        },
+        {
+          "index": 951,
+          "calc_name": "Albumin Corrected Delta Gap",
+          "tool_answer": 3.65,
+          "final_answer": "2.55",
+          "difference": 1.1,
+          "question": "A 73-year-old man presented with nausea, vomiting, diarrhea, dry mouth, and hot flushes 3 hours after eating boiled wild mushrooms. He visited a primary clinic, where his blood pressure was 70/50 mmHg..."
+        }
+      ]
+    },
+    "Albumin Corrected Delta Ratio": {
+      "count": 13,
+      "average_difference": 3.4263846153846154,
+      "max_difference": 12.08,
+      "min_difference": 0.31000000000000005,
+      "examples": [
+        {
+          "index": 948,
+          "calc_name": "Albumin Corrected Delta Ratio",
+          "tool_answer": -1.92,
+          "final_answer": "1.188",
+          "difference": 3.1079999999999997,
+          "question": "A 76-year-old man with a past medical history of prostate cancer, paroxysmal atrial fibrillation, and recurring pneumonia was found to have a 10-mm nodule in the left lower lung without hilar or media..."
+        },
+        {
+          "index": 953,
+          "calc_name": "Albumin Corrected Delta Ratio",
+          "tool_answer": 3.25,
+          "final_answer": "0.283",
+          "difference": 2.967,
+          "question": "A 20-year-old male presented with a 2-month history of on and off swelling of both legs and sudden onset weakness of all 4 limbs without any history of loss of consciousness, seizure, headache, sensor..."
+        },
+        {
+          "index": 964,
+          "calc_name": "Albumin Corrected Delta Ratio",
+          "tool_answer": -2.38,
+          "final_answer": "0.95",
+          "difference": 3.33,
+          "question": "A 17-year-old Caucasian female presented to local hospital with a history of acute alcohol intoxication and ingestion of large quantities of acetaminophen. The patient complained of nausea for 2 days ..."
+        }
+      ]
+    },
+    "Steroid Conversion Calculator": {
+      "count": 30,
+      "average_difference": 43.96456666666667,
+      "max_difference": 202.367,
+      "min_difference": 0.7349999999999994,
+      "examples": [
+        {
+          "index": 1009,
+          "calc_name": "Steroid Conversion Calculator",
+          "tool_answer": 25.0,
+          "final_answer": "36.586",
+          "difference": 11.585999999999999,
+          "question": "Patient has taken 228.664 mg of Cortisone PO.  Based on the patient's dose of Cortisone PO, what is the equivalent dosage in mg of MethylPrednisoLONE PO? ..."
+        },
+        {
+          "index": 1010,
+          "calc_name": "Steroid Conversion Calculator",
+          "tool_answer": 25.0,
+          "final_answer": "8.58",
+          "difference": 16.42,
+          "question": "Patient has taken 8.58 mg of Dexamethasone PO.  Based on the patient's dose of Dexamethasone PO, what is the equivalent dosage in mg of Dexamethasone IV? ..."
+        },
+        {
+          "index": 1014,
+          "calc_name": "Steroid Conversion Calculator",
+          "tool_answer": 25.0,
+          "final_answer": "6.946",
+          "difference": 18.054000000000002,
+          "question": "Patient has taken 187.736 mg of Hydrocortisone IV.  Based on the patient's dose of Hydrocortisone IV, what is the equivalent dosage in mg of Betamethasone IV? ..."
+        }
+      ]
+    },
+    "Morphine Milligram Equivalents (MME) Calculator": {
+      "count": 27,
+      "average_difference": 449.28888888888895,
+      "max_difference": 1759.0,
+      "min_difference": 40.6,
+      "examples": [
+        {
+          "index": 1047,
+          "calc_name": "Morphine Milligram Equivalents (MME) Calculator",
+          "tool_answer": 0,
+          "final_answer": "40.6",
+          "difference": 40.6,
+          "question": "The patient takes 20 mg of FentaNYL buccal 1 time a day, 20 mg of Tapentadol 1 time a day, and 50 mg of TraMADol 3 times a day. Based on the number of doses per day and the quantity of different doses..."
+        },
+        {
+          "index": 1048,
+          "calc_name": "Morphine Milligram Equivalents (MME) Calculator",
+          "tool_answer": 0,
+          "final_answer": "139.0",
+          "difference": 139.0,
+          "question": "The patient takes 40 mg of TraMADol 3 times a day, 20 mg of Morphine 2 times a day, and 50 mg of OxyCODONE 1 time a day. Based on the number of doses per day and the quantity of different doses, what ..."
+        },
+        {
+          "index": 1049,
+          "calc_name": "Morphine Milligram Equivalents (MME) Calculator",
+          "tool_answer": 0,
+          "final_answer": "285.0",
+          "difference": 285.0,
+          "question": "The patient takes 10 mg of OxyCODONE 3 times a day, 20 mg of Morphine 2 times a day, and 40 mg of HYDROmorphone 1 time a day. Based on the number of doses per day and the quantity of different doses, ..."
+        }
+      ]
+    }
+  }
+}
