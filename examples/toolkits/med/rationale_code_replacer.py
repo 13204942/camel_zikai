@@ -343,22 +343,28 @@ def format_args_for_function(tool_name, args):
                 elif isinstance(args['dose'], (list, tuple)) and len(args['dose']) == 2:
                     dose_value = args['dose'][0]
                     dose_unit = args['dose'][1]
-                    
             if dose_value is not None:
                 formatted_args['input steroid'] = [drug_name, dose_value, dose_unit]
+        elif 'input_steroid' in args:
+            drug_name = args['input_steroid']
+            dose_value = args['input_value']
+            dose_unit = args['input_unit']
+            formatted_args['input steroid'] = [drug_name, dose_value, dose_unit]
                 
         # 处理目标药物参数
         if 'target_drug' in args and 'target_route' in args:
             # 统一药物名称的大小写格式
             target_drug = args['target_drug']
             formatted_args['target steroid'] = f"{target_drug} {args['target_route']}"
-        
+        elif 'target_steroid' in args:
+            formatted_args['target steroid'] = f"{args['target_steroid']}"
+
         # 如果没有提供足够的参数，尝试使用默认值
         if 'input steroid' not in formatted_args:
             # 设置默认值 - 但这不是一个好的解决方案，应当在更上游处理
             formatted_args['input steroid'] = ["Hydrocortisone PO", 100.0, "mg"]
             print(f"警告: 使用默认值 {formatted_args['input steroid']} 作为输入甾体药物")
-            
+
         if 'target steroid' not in formatted_args:
             # 设置默认值
             formatted_args['target steroid'] = "PrednisoLONE PO"
@@ -410,6 +416,9 @@ def format_args_for_function(tool_name, args):
                 formatted_args['body_mass_index'] = tuple(args['body_mass_index'])
             else:
                 formatted_args['body_mass_index'] = (args['body_mass_index'], 'kg/m^2')
+        elif 'bmi_value' in args and 'bmi_unit' in args:
+            formatted_args['body_mass_index'] = (args['bmi_value'], args['bmi_unit'])
+
         else:
             # 如果没有提供BMI值，使用健康体重的BMI值
             formatted_args['body_mass_index'] = (22.0, 'kg/m^2')
